@@ -1,0 +1,70 @@
+{
+  "banks": [
+    {
+      "id": 0,
+      "name": "UPI",
+      "currency": "INR",
+      "img": "images/dist/UPI.svg"
+    },
+    {
+      "id": 1,
+      "name": "PhonePe",
+      "currency": "INR",
+      "img": "images/dist/Phone-pi.svg"
+    },
+    {
+      "id": 2,
+      "name": "PayTM",
+      "currency": "INR",
+      "img": "images/dist/paytm.svg"
+    },
+    {
+      "id": 3,
+      "name": "IMPS",
+      "currency": "INR",
+      "img": "images/dist/IMPS.svg"
+    },
+    {
+      "id": 4,
+      "name": "BHIM",
+      "currency": "INR",
+      "img": "images/dist/bhim.svg"
+    },
+    {
+      "id": 5,
+      "name": "Google Pay",
+      "currency": "INR",
+      "img": "images/dist/google-pay.svg"
+    },
+    {
+      "id": 6,
+      "name": "Banco do Brasil",
+      "currency": "BRL",
+      "img": "images/dist/banco.svg"
+    },
+    {
+      "id": 7,
+      "name": "Itaú Unibanco",
+      "currency": "BRL",
+      "img": "images/dist/itau.svg"
+    },
+    {
+      "id": 8,
+      "name": "Caixa Econômica Federal",
+      "currency": "BRL",
+      "img": "images/dist/caixa.svg"
+    },
+    {
+      "id": 9,
+      "name": "Banco Bradesco", 
+      "currency": "BRL",
+      "img": "images/dist/banco-bradesco.svg"
+    },
+    {
+      "id": 10,
+      "name": "Brazilian Development Bank", 
+      "currency": "BRL",
+      "img": "images/dist/brazilian-dev.svg"
+    }
+  ]
+}

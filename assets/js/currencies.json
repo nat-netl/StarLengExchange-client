@@ -1,0 +1,136 @@
+{
+    "currencies": [
+        {
+            "id": 3408,
+            "name": "USDC",
+            "altName": "USDC",
+            "img": "images/dist/USDC.svg",
+            "code": "0x2e9d28cec8363a367aa7a8010e019aa55864b03a",
+            "qrCode": "images/dist/USDC-qr.png",
+            "altImg": "images/dist/USDC.svg",
+            "minExchange": "10",
+            "maxExchange": "10"
+        },
+        {
+            "id": 52,
+            "name": "Ripple",
+            "altName": "XRP",
+            "img": "images/dist/XRP.svg",
+            "code": "0x2e9d28cec8363a367aa7a8010e019aa55864b03a",
+            "qrCode": "images/dist/XRP.png",
+            "altImg": "images/dist/XRP.png",
+            "minExchange": "17.32",
+            "maxExchange": "17.32"
+        },
+        {
+            "id": 5426,
+            "name": "Solana",
+            "altName": "SOL",
+            "img": "images/dist/SOL.svg",
+            "code": "8gjpRU4VhBxL7EukzQc9QA1aGRToJkokSwAUERBN3V8i",
+            "qrCode": "images/dist/SOL-qr.png",
+            "altImg": "images/dist/SOL.svg",
+            "minExchange": "0.065",
+            "maxExchange": "0.065"
+        },
+        {
+            "id": 1,
+            "name": "Bitcoin",
+            "altName": "BTC",
+            "img": "images/dist/BTC.svg",
+            "code": "17dMgt46KyQ2d4JCQtMVyt2Cm6iHxaBpTx",
+            "qrCode": "images/dist/BTC-qr.png",
+            "altImg": "Bitcoin",
+            "minExchange": "0.000164",
+            "maxExchange": "0.000164"
+        },
+        {
+            "id": 1027,
+            "name": "Ethereum",
+            "altName": "ETH",
+            "img": "images/dist/ETH.svg",
+            "code": "0x2e9d28cec8363a367aa7a8010e019aa55864b03a",
+            "qrCode": "images/dist/ETH-qr.png",
+            "altImg": "Ethereum",
+            "minExchange": "0.00376",
+            "maxExchange": "0.00376"
+        },
+        {
+            "id": 1839,
+            "name": "Binance coin",
+            "altName": "BNB",
+            "img": "images/dist/BNB.svg",
+            "code": "0x2e9d28cec8363a367aa7a8010e019aa55864b03a",
+            "qrCode": "images/dist/BNB-qr.png",
+            "altImg": "images/dist/BNB.svg",
+            "minExchange": "0.01904",
+            "maxExchange": "0.01904"
+        },
+        {
+            "id": 825,
+            "name": "Tether ( USDT TRC-20 )",
+            "altName": "USDT",
+            "img": "images/dist/USDT.svg",
+            "code": "0x2e9d28cec8363a367aa7a8010e019aa55864b03a",
+            "qrCode": "images/dist/USDT-TRC-20-qr.png",
+            "altImg": "images/dist/USDT.svg",
+            "minExchange": "10",
+            "maxExchange": "10"
+        },
+        {
+            "id": 825,
+            "name": "Tether ( USDT ERC-20 )",
+            "altName": "USDT",
+            "img": "images/dist/USDT.svg",
+            "code": "0x2e9d28cec8363a367aa7a8010e019aa55864b03a",
+            "qrCode": "images/dist/USDT-ERC-20-qr.png",
+            "altImg": "images/dist/whatsapp-pay-P-min.svg",
+            "minExchange": "10",
+            "maxExchange": "10"
+        },
+        {
+            "id": 6636,
+            "name": "Polkadot",
+            "altName": "DOT",
+            "img": "images/dist/DOT.svg",
+            "code": "14Q3VpN5q1Q4hQDyA2TzWyJuSNMHYnVNj6QMani24VjfSbAq",
+            "qrCode": "images/dist/DOT-qr.png",
+            "altImg": "images/dist/DOT.svg",
+            "minExchange": "2.110",
+            "maxExchange": "2.110"
+        },
+        {
+            "id": 74,
+            "name": "Dogecoin",
+            "altName": "DOGE",
+            "img": "images/dist/DOGE.svg",
+            "code": "DNmwChjB4tEc9ZDkSBkna5Dc4tf1Sq2sJf",
+            "qrCode": "images/dist/DOGE-qr.png",
+            "altImg": "images/dist/Free-Charge-P-min.svg",
+            "minExchange": "92.3",
+            "maxExchange": "92.3"
+        },
+        {
+            "id": 2010,
+            "name": "Cardano",
+            "altName": "ADA",
+            "img": "images/dist/ADA.svg",
+            "code": "addr1v9tap6ckgfqmfv4gphef84vafa2680ld2saz6mq4z7krn7g69t7uw",
+            "qrCode": "images/dist/ADA-qr.png",
+            "altImg": "images/dist/ADA.svg",
+            "minExchange": "28.69",
+            "maxExchange": "28.69"
+        },
+        {
+            "id": 1958,
+            "name": "TRON",
+            "altName": "TRX",
+            "img": "images/dist/TRX.svg",
+            "code": "TLPKDQWUKaZBsmaThZo8nt3DQc9KDBci8n",
+            "qrCode": "images/dist/TRX-qr.png",
+            "altImg": "images/dist/TRX.svg",
+            "minExchange": "77.89",
+            "maxExchange": "77.89"
+        }
+    ]
+}
