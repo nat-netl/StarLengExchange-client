@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="initial-scale=1, width=device-width" />
+
+  <link rel="stylesheet" href="./assets/css/index.css" />
+  <link rel="stylesheet" href="./assets/css/swiper.css" />
+  <link rel="stylesheet" href="./assets/css/jquery.modal.min.css  " />
+
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Figma Hand:wght@700&display=swap" />
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" />
+</head>
+
+<body>
+
+  <header class="container">
+    <div class="header__wrapper">
+      <div class="header">
+        <a href="/" class="home__link">
+          <img src="./assets/images/main/logo.svg" />
+        </a>
+  
+        <ul class="route__items">
+          <li><a href="/about_us.html" class="route__item">About us</a></li>
+          <li><a href="" class="route__item">Exchange rules</a></li>
+          <li><a href="" class="route__item">Help</a></li>
+          <li><a href="" class="route__item">AML/KYC</a></li>
+        </ul>
+      </div>
+    </div>
+  </header>
+
+  <main class="main">
+
+    <section class="order container">
+      <h1 class="order__title">
+        Submitting a order <span class="order-title__number">№2958733949</span>
+      </h1>
+
+      <div class="full__order">
+
+        <div class="order__details">
+          <div class="order-details__title-box js-open">
+            <h2 class="order-details__title">Exchange details</h2>
+            <span class="order-details__title-arrow js-arrow"></span>
+          </div>
+
+          <div class="order__content js-content">
+
+            <div class="order__convert">
+              <div class="convert-order__item first-convert-item">
+                <img class="icon-item-order__img" src="./assets/images/dist/BTC.svg" />
+
+                <div class="item-order__info">
+                  <span class="info-item-order__amount send"></span>
+                </div>
+              </div>
+
+              <span class="convert-order__arrow"></span>
+
+              <div class="convert-order__item second-convert-item">
+                <img class="icon-item-order__img" src="./assets/images/dist/BTC.svg" />
+
+                <div class="item-order__info">
+                  <span class="info-item-order__amount recieve"></span>
+                  <small class="info-item-order__address"><span class="upi-address"></span></small>
+                </div>
+              </div>
+            </div>
+
+            <h2 class="order-details__title title-mobile">Exchange details</h2>
+            <div class="order-details__stages">
+              <div class="stages-order__order-stage _active-stage">
+                <span class="stages-order-stage__icon"></span>
+                <div class="stages-order-stage__text">
+                  Order stages
+                </div>
+              </div>
+
+              <div class="stages-order__icon">
+                <span class="icon-stages-order__dash"></span>
+                <span class="icon-stages-order__dash"></span>
+                <span class="icon-stages-order__dash"></span>
+              </div>
+
+              <div class="stages-order__final-stage">
+                <span class="stages-final-stage__icon"></span>
+                <div class="stages-final-stage__text">
+                  Final status
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="order__payment">
+          <div class="order-payment__under">
+            <div class="under-order__header">
+              <div class="header-under-order__title">
+                <h1 class="title-header-under-order__text">Stage №1: Payment under progress</h1>
+                <span class="title-header-under-order__counter"></span>
+              </div>
+
+              <div class="header-under-order__text">Make payment before the specified time expires. After that, return
+                to
+                our website and click the «I paid» button to process the order</div>
+            </div>
+
+            <div class="under-order__details">
+              <h2 class="details-under__title">Payment details</h2>
+
+              <div class="details-under__info">
+                <div class="info-details-under__recieve">
+                  <img class="recieve-info-details-under__icon" src="./assets/images/dist/BTC.svg" />
+                  <div class="recieve-info-details-under__name">Binance Coin</div>
+                </div>
+
+                <div class="info-details-under__address">
+                  <div class="address-info-details-under__title">Address:</div>
+
+                  <div class="address-info-details-under__content">
+                    <div class="content-address-info-details-under__code copy-item" id="qrCode"></div>
+                    <div class="content-address-info-details-under__icon-box">
+                      <a class="content-address-info-details-under__qrIcon qrIcon" href="#qr" rel="modal:open"></a>
+                      <span class="content-address-info-details-under__copyIcon copyIcon" onClick="copyToClipboard('#qrCode')"></span>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+              <div class="info-details-under__text">
+                Check the address when copying!
+                Please be aware of the virus capable of substituting wallet addresses of various cryptocurrencies in
+                the
+                clipboard with the addresses under the control of scammers.<br /><br /> To avoid losing your digital
+                assets, we
+                urge you to check the first and last five characters of the inserted wallet with the address you
+                copied
+                it from. Remember, only your attentiveness will help protect you from scammers.
+              </div>
+
+              <div class="info-details-under__total">
+                <div class="total-info-details-under__payment">
+                  <div class="payment-total-info-details-under__title">Total for payment:</div>
+                  <div class="payment-total-info-details-under__price">
+                    <span class="total__price copy-item" id="total__price"></span> 
+                    <span class="copyIcon" onclick="copyToClipboard('#total__price')"></span>
+                  </div>
+                </div>
+
+                <div class="total-info-details-under__buttons">
+                  <button class="buttons-total-info-details-under__paid paid" type="submit">I paid</button>
+                  <button class="buttons-total-info-details-under__cancel cancel-order" type="submit">Cancel
+                    order</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="order-payment__final">
+            <div class="under-order__header">
+              <div class="header-under-order__title">
+                <h1 class="title-header-under-order__text">Stage №2: Final status</h1>
+              </div>
+
+              <div class="header-under-order__text">
+                At the moment, we are checking the receipt of payment to our
+                account. After the payment is confirmed order will be processed
+              </div>
+            </div>
+
+            <div class="final-payment__info">
+              <div class="info-final-payment__address">
+                <div class="address-info-final-payment__title">Address</div>
+                <div class="address-info-final-payment__code">bc1qs34kn0u...l3p8slmt5drt</div>
+              </div>
+
+              <div class="info-final-payment__amount">
+                <div class="address-info-final-payment__title">Amount</div>
+                <div class="address-info-final-payment__amount"></div>
+              </div>
+            </div>
+
+            <div class="final-payment__loading">
+              <div class="content-loading-final-payment__items">
+                <span class="content-loading-final-payment__item loading-item"></span>
+                <span class="content-loading-final-payment__item loading-item"></span>
+                <span class="content-loading-final-payment__item loading-item"></span>
+              </div>
+
+              <span class="content-loading-final-payment__text">Checking the receipt of payment to our account. It may
+                take up to 15 minutes. Thank you for waiting
+                and patience!</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div id="qr" class="modal">
+      <a href="#" rel="modal:close"></a>
+      <div class="qr__info">
+        <div class="qr-info__image">
+          <img src="" alt="qr code">
+        </div>
+
+        <div class="qr-info__code"></div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer container">
+    <div class="social__network">
+      <div class="social-network__item">
+        <div class="social-network-item__left">
+          <span class="social-network-item__left-icon social-network-item__left-icon1"></span>
+        </div>
+        <div class="social-network-item__right">
+          <a href="mailto:support@starleng.com" class="social-network-item__right-link">support@starleng.com</a>
+          <span class="social-network-item__right-desc">technical support</span>
+        </div>
+      </div>
+      <div class="social-network__item">
+        <div class="social-network-item__left">
+          <span class="social-network-item__left-icon social-network-item__left-icon2"></span>
+        </div>
+        <div class="social-network-item__right">
+          <a href="mailto:support@starleng.com" class="social-network-item__right-link">support@starleng.com</a>
+          <span class="social-network-item__right-desc">on advertising</span>
+        </div>
+      </div>
+      <div class="social-network__item">
+        <div class="social-network-item__left">
+          <span class="social-network-item__left-icon3"></span>
+        </div>
+        <div class="social-network-item__right">
+          <a href="https://t.me/" class="social-network-item__right-link">
+            Telegram
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer__info">
+      ©️ S.R.L. BLOCKCHAIN-SERVICE 2019-2024
+    </div>
+  </footer>
+
+
+  <script src="./assets/js/libs/swiper-bundle.min.js"></script>
+  <script src="./assets/js/libs/jquery-3.7.1.min.js"></script>
+  <script src="./assets/js/libs/jquery-ui.min.js"></script>
+  <script src="./assets/js/libs/jquery.validate.min.js"></script>
+  <script src="./assets/js/libs/jquery.modal.min.js"></script>
+  <script src="./assets/js/order.js"></script>
+  <script src="./assets/js/main.js"></script>
+
+</body>
+
+</html>

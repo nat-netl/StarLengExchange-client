@@ -16,17 +16,19 @@
 <body>
 
   <header class="container">
-    <div class="header">
-      <a href="/calculator.html" class="home__link">
-        <img src="./assets/images/main/logo.svg" />
-      </a>
-
-      <ul class="route__items">
-        <li><a href="/about_us.html" class="route__item">About us</a></li>
-        <li><a href="" class="route__item">Exchange rules</a></li>
-        <li><a href="" class="route__item">Help</a></li>
-        <li><a href="" class="route__item">AML/KYC</a></li>
-      </ul>
+    <div class="header__wrapper">
+      <div class="header">
+        <a href="/" class="home__link">
+          <img src="./assets/images/main/logo.svg" />
+        </a>
+  
+        <ul class="route__items">
+          <li><a href="/about_us.html" class="route__item">About us</a></li>
+          <li><a href="" class="route__item">Exchange rules</a></li>
+          <li><a href="" class="route__item">Help</a></li>
+          <li><a href="" class="route__item">AML/KYC</a></li>
+        </ul>
+      </div>
     </div>
   </header>
 
@@ -95,8 +97,8 @@
                   </div>
                 </button>
 
-                <button class="item-block__currency item-block_valute__currency _active-valute" data-id="1839"
-                  data-type="coin" data-currency="Binance coin">
+                <button class="item-block__currency item-block_valute__currency " data-id="1839" data-type="coin"
+                  data-currency="Binance coin">
                   <img class="item-block-currency__image" src="./assets/images/dist/BNB.svg" alt="Binance coin">
                   <div class="currency__item-block__name">
                     <p class="currency__full">Binance coin ( BNB )</p>
@@ -365,8 +367,8 @@
 
               <div class="calculator-tabs__items-content" id="tabs-3">
 
-                <button class="item-block__currency item-block_bank__currency _active-receive" data-id="0"
-                  data-type="bank" data-currency="UPI" data-valute="INR">
+                <button class="item-block__currency item-block_bank__currency " data-id="0" data-type="bank"
+                  data-currency="UPI" data-valute="INR">
                   <img class="item-block-currency__image" src="./assets/images/dist/UPI.svg" alt="UPI">
                   <div class="currency__item-block__name">
                     <p class="currency__full">UPI ( INR )</p>
@@ -539,8 +541,7 @@
               <div class="calculator-exchange-details-form__block-checkboxes">
                 <div class="calculator-exchange-details-form__block-checkbox">
                   <div class="calculator-exchange-details-form__checkbox">
-                    <input type="checkbox" name="personal"
-                      class="calculator-exchange-details-form__checkbox-input">
+                    <input type="checkbox" name="personal" class="calculator-exchange-details-form__checkbox-input">
                     <div class="checkbox">
                       <svg class="checkmark" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
                         viewBox="0 0 24 24">
@@ -569,7 +570,9 @@
                 </div>
               </div>
 
-              <button type="submit" class="proceed-payment">Proceed to payment</button>
+              <div class="proceed-payment__box">
+                <button type="submit" class="proceed-payment">Proceed to payment</button>
+              </div>
             </form>
           </div>
         </div>
@@ -581,83 +584,87 @@
         Clients' feedbacks
       </h2>
 
-      <div class="feedbacks">
-        <div class="feedback">
-          <div class="feedback__info">
-            <span class="feedback-info__icon"></span>
-            <div class="feedback-info__name">Mayank Khaturiya</div>
+      <div class="feedbacks-swiper">
+        <div class="feedbacks swiper-wrapper">
+          <div class="feedback swiper-slide">
+            <div class="feedback__info">
+              <span class="feedback-info__icon"></span>
+              <div class="feedback-info__name">Mayank Khaturiya</div>
+            </div>
+
+            <div class="feedback__text">
+              The first time I used the exchange at all, everything is super, I exchanged the cardan for USDT,
+              everything
+              came in a couple of minutes. Super exchanger. I am satisfied with this work of the service
+            </div>
           </div>
 
-          <div class="feedback__text">
-            The first time I used the exchange at all, everything is super, I exchanged the cardan for USDT, everything
-            came in a couple of minutes. Super exchanger. I am satisfied with this work of the service
-          </div>
-        </div>
+          <div class="feedback swiper-slide">
+            <div class="feedback__info">
+              <span class="feedback-info__icon"></span>
+              <div class="feedback-info__name">Sushil Kumar</div>
+            </div>
 
-        <div class="feedback">
-          <div class="feedback__info">
-            <span class="feedback-info__icon"></span>
-            <div class="feedback-info__name">Sushil Kumar</div>
-          </div>
-
-          <div class="feedback__text">
-            The first time I used this service and was very surprised at the speed of the exchange execution. I didn't
-            have time to pour myself a cup of tea. and the operation has already been performed! I recommend
-            everything!!!! Thank you for the quality of your work!
-          </div>
-        </div>
-
-        <div class="feedback">
-          <div class="feedback__info">
-            <span class="feedback-info__icon"></span>
-            <div class="feedback-info__name">Sonu Jatoliya</div>
+            <div class="feedback__text">
+              The first time I used this service and was very surprised at the speed of the exchange execution. I didn't
+              have time to pour myself a cup of tea. and the operation has already been performed! I recommend
+              everything!!!! Thank you for the quality of your work!
+            </div>
           </div>
 
-          <div class="feedback__text">
-            I wrote somewhere jokingly that it is the only exchanger I've met in three years that makes money faster
-            than
-            you send it) I am kidding, of course, but I use it all the time and recommend it!
-          </div>
-        </div>
+          <div class="feedback swiper-slide">
+            <div class="feedback__info">
+              <span class="feedback-info__icon"></span>
+              <div class="feedback-info__name">Sonu Jatoliya</div>
+            </div>
 
-        <div class="feedback">
-          <div class="feedback__info">
-            <span class="feedback-info__icon"></span>
-            <div class="feedback-info__name">Bishal Sharma</div>
-          </div>
-
-          <div class="feedback__text">
-            I am very satisfied with the work of the exchange service. The team works correctly, is attentive to the
-            wishes of the participants. I wish the service success and prosperity! I will advise everyone to use their
-            services!
-          </div>
-        </div>
-
-        <div class="feedback">
-          <div class="feedback__info">
-            <span class="feedback-info__icon"></span>
-            <div class="feedback-info__name">Patel Parthiv</div>
+            <div class="feedback__text">
+              I wrote somewhere jokingly that it is the only exchanger I've met in three years that makes money faster
+              than
+              you send it) I am kidding, of course, but I use it all the time and recommend it!
+            </div>
           </div>
 
-          <div class="feedback__text">
-            Great exchanger for buying and withdrawing crypto. The exchange rate is good, the speed is normal. All works
-            at the level. They have a channel on Telegram and if you have any questions, you can contact them there.
-            They
-            will reply quickly.
-          </div>
-        </div>
+          <div class="feedback swiper-slide">
+            <div class="feedback__info">
+              <span class="feedback-info__icon"></span>
+              <div class="feedback-info__name">Bishal Sharma</div>
+            </div>
 
-        <div class="feedback">
-          <div class="feedback__info">
-            <span class="feedback-info__icon"></span>
-            <div class="feedback-info__name">Sudhir Kumar</div>
+            <div class="feedback__text">
+              I am very satisfied with the work of the exchange service. The team works correctly, is attentive to the
+              wishes of the participants. I wish the service success and prosperity! I will advise everyone to use their
+              services!
+            </div>
           </div>
 
-          <div class="feedback__text">
-            Not only do the guys work quickly, I would like to write about the integrity of the resource!!!! Sent
-            instead
-            of 30, 60 ADA. I turned to support, the issue was solved literally in 10 minutes. Respect and
-            prosperity!!!!!
+          <div class="feedback swiper-slide">
+            <div class="feedback__info">
+              <span class="feedback-info__icon"></span>
+              <div class="feedback-info__name">Patel Parthiv</div>
+            </div>
+
+            <div class="feedback__text">
+              Great exchanger for buying and withdrawing crypto. The exchange rate is good, the speed is normal. All
+              works
+              at the level. They have a channel on Telegram and if you have any questions, you can contact them there.
+              They
+              will reply quickly.
+            </div>
+          </div>
+
+          <div class="feedback swiper-slide">
+            <div class="feedback__info">
+              <span class="feedback-info__icon"></span>
+              <div class="feedback-info__name">Sudhir Kumar</div>
+            </div>
+
+            <div class="feedback__text">
+              Not only do the guys work quickly, I would like to write about the integrity of the resource!!!! Sent
+              instead
+              of 30, 60 ADA. I turned to support, the issue was solved literally in 10 minutes. Respect and
+              prosperity!!!!!
+            </div>
           </div>
         </div>
       </div>

@@ -8,6 +8,7 @@
             "code": "0x2e9d28cec8363a367aa7a8010e019aa55864b03a",
             "qrCode": "images/dist/USDC-qr.png",
             "altImg": "images/dist/USDC.svg",
+            "amount": 0,
             "minExchange": "10",
             "maxExchange": "10"
         },
@@ -19,6 +20,7 @@
             "code": "0x2e9d28cec8363a367aa7a8010e019aa55864b03a",
             "qrCode": "images/dist/XRP.png",
             "altImg": "images/dist/XRP.png",
+            "amount": 0,
             "minExchange": "17.32",
             "maxExchange": "17.32"
         },
@@ -30,6 +32,7 @@
             "code": "8gjpRU4VhBxL7EukzQc9QA1aGRToJkokSwAUERBN3V8i",
             "qrCode": "images/dist/SOL-qr.png",
             "altImg": "images/dist/SOL.svg",
+            "amount": 0,
             "minExchange": "0.065",
             "maxExchange": "0.065"
         },
@@ -41,6 +44,7 @@
             "code": "17dMgt46KyQ2d4JCQtMVyt2Cm6iHxaBpTx",
             "qrCode": "images/dist/BTC-qr.png",
             "altImg": "Bitcoin",
+            "amount": 0,
             "minExchange": "0.000164",
             "maxExchange": "0.000164"
         },
@@ -52,6 +56,7 @@
             "code": "0x2e9d28cec8363a367aa7a8010e019aa55864b03a",
             "qrCode": "images/dist/ETH-qr.png",
             "altImg": "Ethereum",
+            "amount": 0,
             "minExchange": "0.00376",
             "maxExchange": "0.00376"
         },
@@ -63,6 +68,7 @@
             "code": "0x2e9d28cec8363a367aa7a8010e019aa55864b03a",
             "qrCode": "images/dist/BNB-qr.png",
             "altImg": "images/dist/BNB.svg",
+            "amount": 0,
             "minExchange": "0.01904",
             "maxExchange": "0.01904"
         },
@@ -74,6 +80,7 @@
             "code": "0x2e9d28cec8363a367aa7a8010e019aa55864b03a",
             "qrCode": "images/dist/USDT-TRC-20-qr.png",
             "altImg": "images/dist/USDT.svg",
+            "amount": 0,
             "minExchange": "10",
             "maxExchange": "10"
         },
@@ -85,6 +92,7 @@
             "code": "0x2e9d28cec8363a367aa7a8010e019aa55864b03a",
             "qrCode": "images/dist/USDT-ERC-20-qr.png",
             "altImg": "images/dist/whatsapp-pay-P-min.svg",
+            "amount": 0,
             "minExchange": "10",
             "maxExchange": "10"
         },
@@ -96,6 +104,7 @@
             "code": "14Q3VpN5q1Q4hQDyA2TzWyJuSNMHYnVNj6QMani24VjfSbAq",
             "qrCode": "images/dist/DOT-qr.png",
             "altImg": "images/dist/DOT.svg",
+            "amount": 0,
             "minExchange": "2.110",
             "maxExchange": "2.110"
         },
@@ -107,6 +116,7 @@
             "code": "DNmwChjB4tEc9ZDkSBkna5Dc4tf1Sq2sJf",
             "qrCode": "images/dist/DOGE-qr.png",
             "altImg": "images/dist/Free-Charge-P-min.svg",
+            "amount": 0,
             "minExchange": "92.3",
             "maxExchange": "92.3"
         },
@@ -118,6 +128,7 @@
             "code": "addr1v9tap6ckgfqmfv4gphef84vafa2680ld2saz6mq4z7krn7g69t7uw",
             "qrCode": "images/dist/ADA-qr.png",
             "altImg": "images/dist/ADA.svg",
+            "amount": 0,
             "minExchange": "28.69",
             "maxExchange": "28.69"
         },
@@ -129,6 +140,7 @@
             "code": "TLPKDQWUKaZBsmaThZo8nt3DQc9KDBci8n",
             "qrCode": "images/dist/TRX-qr.png",
             "altImg": "images/dist/TRX.svg",
+            "amount": 0,
             "minExchange": "77.89",
             "maxExchange": "77.89"
         }
