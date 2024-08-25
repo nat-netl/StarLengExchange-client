@@ -96,7 +96,7 @@ async function getBankByIdJson(id) {
 }
 
 async function getDataById(id, valute) {
-  const url = "http://localhost:8001";
+  const url = "https://starlengexchange-server.onrender.com";
   const endPoint = "api/v1/coin";
   const baseUrl = `${url}/${endPoint}?id=${id}&valute=${valute}`;
   try {
@@ -112,7 +112,7 @@ async function getDataById(id, valute) {
 }
 
 async function currentOrder(page) {
-  const url = "http://localhost:8001";
+  const url = "https://starlengexchange-server.onrender.com";
   const endPoint = "api/v1/page";
   const baseUrl = `${url}/${endPoint}?page=${page}`;
   try {
