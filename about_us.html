@@ -8,6 +8,8 @@
   <link rel="stylesheet" href="./assets/css/index.css" />
   <link rel="stylesheet" href="./assets/css/swiper.css" />
 
+  <link href="https://cdn.jsdelivr.net/npm/wowjs@1.1.3/css/libs/animate.min.css" rel="stylesheet">
+
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Figma Hand:wght@700&display=swap" />
   <link rel="stylesheet"
     href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" />
@@ -18,18 +20,54 @@
   <header class="container">
     <div class="header__wrapper">
       <div class="header">
-        <a class="menu-btn"></a>
+        <div class="header__nav">
+          <a class="menu-btn"></a>
 
-        <a href="/" class="home__link">
-          <img src="./assets/images/main/logo.svg" />
-        </a>
-  
-        <ul class="route__items">
-          <li><a href="/about_us.html" class="route__item">About us</a></li>
-          <li><a href="" class="route__item">Exchange rules</a></li>
-          <li><a href="" class="route__item">Help</a></li>
-          <li><a href="" class="route__item">AML/KYC</a></li>
-        </ul>
+          <a href="/" class="home__link">
+            <img src="./assets/images/main/logo.svg" />
+          </a>
+        </div>
+
+        <div class="menu__wrapper">
+          <ul class="route__items">
+            <li><a href="/" class="route__item home">Home</a></li>
+            <li><a href="/about_us.html" class="route__item">About us</a></li>
+            <li><a href="/exchange_rules.html" class="route__item">Exchange rules</a></li>
+            <li><a href="/help.html" class="route__item">Help</a></li>
+            <li><a href="/aml.html" class="route__item">AML/KYC</a></li>
+          </ul>
+
+          <div class="menu-social__network">
+            <div class="menu-social-network__item">
+              <div class="social-network-item__left">
+                <span class="social-network-item__left-icon social-network-item__left-icon1"></span>
+              </div>
+              <div class="menu-social-network-item__right">
+                <a href="mailto:support@starleng.com" class="social-network-item__right-link">support@starleng.com</a>
+                <span class="social-network-item__right-desc">technical support</span>
+              </div>
+            </div>
+            <div class="menu-social-network__item">
+              <div class="social-network-item__left">
+                <span class="social-network-item__left-icon social-network-item__left-icon2"></span>
+              </div>
+              <div class="menu-social-network-item__right">
+                <a href="mailto:support@starleng.com" class="social-network-item__right-link">support@starleng.com</a>
+                <span class="social-network-item__right-desc">on advertising</span>
+              </div>
+            </div>
+            <div class="menu-social-network__item">
+              <div class="social-network-item__left">
+                <span class="social-network-item__left-icon3"></span>
+              </div>
+              <div class="menu-social-network-item__right">
+                <a href="https://t.me/" class="social-network-item__right-link">
+                  Telegram
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </header>
@@ -37,12 +75,14 @@
   <main class="main">
     <section class="introduction container">
       <div class="introduction__left">
-        <h1 class="introduction-left__title">Starleng - international cryptocurrency exchange service</h1>
-        <span class="introduction-left__text">We have been working since 2019 and every day we try to improve <br />
+        <h1 class="introduction-left__title wow slideInLeft" >Starleng - international
+          cryptocurrency exchange service</h1>
+        <span class="introduction-left__text wow slideInLeft" data-wow-duration="1.3s">We have been working since 2019
+          and every day we try to improve <br />
           our
           service in order to provide our clients with the best conditions on the exchange services market</span>
       </div>
-      <div class="introduction__right">
+      <div class="introduction__right wow slideInRight" data-wow-duration="1.3s">
         <div class="introduction-right__cicle">
         </div>
       </div>
@@ -54,10 +94,10 @@
 
 
     <section class="clients__choose container">
-      <h2 class="clients-choose__title">Why clients choose Starleng</h2>
+      <h2 class="clients-choose__title wow fadeIn" data-wow-duration="2s">Why clients choose Starleng</h2>
 
       <ul class="clients-choose__items">
-        <li class="clients-choose-items__item">
+        <li class="clients-choose-items__item wow fadeIn" data-wow-duration="2s">
           <div class="clients-choose-items__left">
             <span class="clients-choose-item__left-icon clients-choose-item__left-icon1"></span>
           </div>
@@ -66,7 +106,7 @@
             <div class="clients-choose-items__right-subTitle">From SBI to Shiba</div>
           </div>
         </li>
-        <li class="clients-choose-items__item">
+        <li class="clients-choose-items__item wow fadeIn" data-wow-duration="2.2s">
           <div class="clients-choose-items__left">
             <span class="clients-choose-item__left-icon clients-choose-item__left-icon2"></span>
           </div>
@@ -75,16 +115,16 @@
             <div class="clients-choose-items__right-subTitle">24/7 support and exchanges</div>
           </div>
         </li>
-        <li class="clients-choose-items__item">
+        <li class="clients-choose-items__item wow fadeIn" data-wow-duration="2.4s">
           <div class="clients-choose-items__left">
             <span class="clients-choose-item__left-icon clients-choose-item__left-icon3"></span>
           </div>
-          <div class="clients-choose-item__right">
+          <div class="clients-choose-item__right ">
             <div class="clients-choose-items__right-title">Advantageous rates</div>
             <div class="clients-choose-items__right-subTitle">Some of the best offers</div>
           </div>
         </li>
-        <li class="clients-choose-items__item">
+        <li class="clients-choose-items__item wow fadeIn" data-wow-duration="2.6s">
           <div class="clients-choose-items__left">
             <span class="clients-choose-item__left-icon clients-choose-item__left-icon4"></span>
           </div>
@@ -93,7 +133,7 @@
             <div class="clients-choose-items__right-subTitle">Average processing time 12 minutes</div>
           </div>
         </li>
-        <li class="clients-choose-items__item">
+        <li class="clients-choose-items__item wow fadeIn" data-wow-duration="2.8s">
           <div class="clients-choose-items__left">
             <span class="clients-choose-item__left-icon clients-choose-item__left-icon5"></span>
           </div>
@@ -102,7 +142,7 @@
             <div class="clients-choose-items__right-subTitle">Start date of the service</div>
           </div>
         </li>
-        <li class="clients-choose-items__item">
+        <li class="clients-choose-items__item wow fadeIn" data-wow-duration="3s">
           <div class="clients-choose-items__left">
             <span class="clients-choose-item__left-icon clients-choose-item__left-icon6"></span>
           </div>
@@ -115,10 +155,10 @@
     </section>
 
     <section class="clients__security container">
-      <h2 class="clients-security__title">Providing the highest level of security</h2>
+      <h2 class="clients-security__title wow fadeIn" data-wow-duration="2s">Providing the highest level of security</h2>
 
       <ul class="clients-security__items">
-        <li class="clients-security-items__item">
+        <li class="clients-security-items__item wow fadeIn" data-wow-duration="2s">
           <div class="clients-security-items__left">
             <span class="clients-security-item__left-icon clients-security-item__left-icon1"></span>
           </div>
@@ -127,7 +167,7 @@
             </div>
           </div>
         </li>
-        <li class="clients-security-items__item">
+        <li class="clients-security-items__item wow fadeIn" data-wow-duration="2.2s">
           <div class="clients-security-items__left">
             <span class="clients-security-item__left-icon clients-security-item__left-icon2"></span>
           </div>
@@ -135,7 +175,7 @@
             <div class="clients-security-items__right-title">Verification of payments by security operators</div>
           </div>
         </li>
-        <li class="clients-security-items__item">
+        <li class="clients-security-items__item wow fadeIn" data-wow-duration="2.4s">
           <div class="clients-security-items__left">
             <span class="clients-security-item__left-icon clients-security-item__left-icon3"></span>
           </div>
@@ -143,7 +183,7 @@
             <div class="clients-security-items__right-title">The quality control system for processing requests</div>
           </div>
         </li>
-        <li class="clients-security-items__item">
+        <li class="clients-security-items__item wow fadeIn" data-wow-duration="2.6s">
           <div class="clients-security-items__left">
             <span class="clients-security-item__left-icon clients-security-item__left-icon4"></span>
           </div>
@@ -155,15 +195,54 @@
     </section>
 
     <section class="reviews">
-      <h2 class="reviews__title container">Over 1500 positive reviews on BestChange and Exchangesumo</h2>
+      <h2 class="reviews__title container wow fadeIn" data-wow-duration="2s">Over 1500 positive reviews on BestChange
+        and Exchangesumo</h2>
 
-      <div class="swiper">
+      <div class="swiper wow fadeIn">
         <div class="swiper-wrapper">
           <!-- Slides -->
           <div class="swiper-slide reviews__item">
+            <div class="reviews-item__text">Great exchanger for buying and withdrawing crypto. The exchange rate is
+              good, the speed is normal. All works at the level. They have a channel on Telegram and if you have any
+              questions, you can contact them there. They will reply quickly.
+            </div>
+
+            <div class="reviews-item__info">
+              <div class="reviews-item__info">
+                <span class="reviews-item-info__icon"></span>
+                <span class="reviews-item-info__name">
+                  Rohith Soggadu
+                </span>
+              </div>
+              <div class="reviews-item__tag">
+                <span class="reviews-item-tag__name">Exchangesumo</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="swiper-slide reviews__item wow slideInRight">
+            <div class="reviews-item__text">Not only do the guys work quickly, I would like to write about the integrity
+              of the resource!!!! Sent instead of 30, 60 ADA. I turned to support, the issue was solved literally in 10
+              minutes. Respect and prosperity!!!!!
+            </div>
+
+            <div class="reviews-item__info">
+              <div class="reviews-item__info">
+                <span class="reviews-item-info__icon"></span>
+                <span class="reviews-item-info__name">
+                  Alex
+                </span>
+              </div>
+              <div class="reviews-item__tag">
+                <span class="reviews-item-tag__name">Exchangesumo</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="swiper-slide reviews__item">
             <div class="reviews-item__text">The first time I used this service and was very surprised at the speed of
-              the exchange execution. I didn't have time to pour myself a cup of tea. and the operation has already
-              been performed! I recommend everything!!!! Thank you for the quality of your work!
+              the exchange execution. I didn't have time to pour myself a cup of tea. and the operation has already been
+              performed! I recommend everything!!!! Thank you for the quality of your work!
             </div>
 
             <div class="reviews-item__info">
@@ -180,16 +259,16 @@
           </div>
 
           <div class="swiper-slide reviews__item">
-            <div class="reviews-item__text">The first time I used this service and was very surprised at the speed of
-              the exchange execution. I didn't have time to pour myself a cup of tea. and the operation has already
-              been performed! I recommend everything!!!! Thank you for the quality of your work!
+            <div class="reviews-item__text">I am very satisfied with the work of the exchange service. The team works
+              correctly, is attentive to the wishes of the participants. I wish the service success and prosperity! I
+              will advise everyone to use their services!
             </div>
 
             <div class="reviews-item__info">
               <div class="reviews-item__info">
                 <span class="reviews-item-info__icon"></span>
                 <span class="reviews-item-info__name">
-                  Ruhaan Zaid
+                  Puneet Mishra
                 </span>
               </div>
               <div class="reviews-item__tag">
@@ -198,17 +277,17 @@
             </div>
           </div>
 
-          <div class="swiper-slide reviews__item">
-            <div class="reviews-item__text">The first time I used this service and was very surprised at the speed of
-              the exchange execution. I didn't have time to pour myself a cup of tea. and the operation has already
-              been performed! I recommend everything!!!! Thank you for the quality of your work!
+          <div class="swiper-slide reviews__item wow slideInLeft">
+            <div class="reviews-item__text">I wrote somewhere jokingly that it is the only exchanger I've met in three
+              yearsthat makes money faster than you send it) I am kidding, of course, but I use it all the time and
+              recommend it!
             </div>
 
             <div class="reviews-item__info">
               <div class="reviews-item__info">
                 <span class="reviews-item-info__icon"></span>
                 <span class="reviews-item-info__name">
-                  Ruhaan Zaid
+                  Nawab Hashmi
                 </span>
               </div>
               <div class="reviews-item__tag">
@@ -216,26 +295,6 @@
               </div>
             </div>
           </div>
-
-          <div class="swiper-slide reviews__item">
-            <div class="reviews-item__text">The first time I used this service and was very surprised at the speed of
-              the exchange execution. I didn't have time to pour myself a cup of tea. and the operation has already
-              been performed! I recommend everything!!!! Thank you for the quality of your work!
-            </div>
-
-            <div class="reviews-item__info">
-              <div class="reviews-item__info">
-                <span class="reviews-item-info__icon"></span>
-                <span class="reviews-item-info__name">
-                  Ruhaan Zaid
-                </span>
-              </div>
-              <div class="reviews-item__tag">
-                <span class="reviews-item-tag__name">BestChange</span>
-              </div>
-            </div>
-          </div>
-
         </div>
         <!-- <div class="swiper-pagination"></div> -->
 
@@ -244,7 +303,7 @@
       </div>
     </section>
 
-    <section class="service container">
+    <section class="service container wow fadeIn" data-wow-duration="1.5s">
       <div class="service__wrapper">
         <div class="service__left">
           <img src="./assets/images/about-us/finishmob.png" alt="Service" class="service-left__image">
@@ -260,7 +319,7 @@
     </section>
   </main>
 
-  <footer class="footer container">
+  <footer class="footer container wow fadeIn" data-wow-duration="1.5s">
     <div class="social__network">
       <div class="social-network__item">
         <div class="social-network-item__left">
@@ -297,7 +356,7 @@
     </div>
   </footer>
 
-
+  <script src="https://cdn.jsdelivr.net/npm/wowjs@1.1.3/dist/wow.min.js"></script>
   <script src="./assets/js/libs/swiper-bundle.min.js"></script>
   <script src="./assets/js/libs/jquery-3.7.1.min.js"></script>
   <script src="./assets/js/libs/jquery-ui.min.js"></script>

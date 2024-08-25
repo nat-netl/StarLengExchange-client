@@ -1,0 +1,616 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="initial-scale=1, width=device-width" />
+  <link href="https://cdn.jsdelivr.net/npm/wowjs@1.1.3/css/libs/animate.min.css" rel="stylesheet">
+
+  <link rel="stylesheet" href="./assets/css/index.css" />
+  <link rel="stylesheet" href="./assets/css/swiper.css" />
+
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Figma Hand:wght@700&display=swap" />
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" />
+</head>
+
+<body>
+
+  <header class="container">
+    <div class="header__wrapper">
+      <div class="header">
+        <div class="header__nav">
+          <a class="menu-btn"></a>
+
+          <a href="/" class="home__link">
+            <img src="./assets/images/main/logo.svg" />
+          </a>
+        </div>
+
+        <div class="menu__wrapper">
+          <ul class="route__items">
+            <li><a href="/" class="route__item home">Home</a></li>
+            <li><a href="/about_us.html" class="route__item">About us</a></li>
+            <li><a href="/exchange_rules.html" class="route__item">Exchange rules</a></li>
+            <li><a href="/help.html" class="route__item">Help</a></li>
+            <li><a href="/aml.html" class="route__item">AML/KYC</a></li>
+          </ul>
+
+          <div class="menu-social__network">
+            <div class="menu-social-network__item">
+              <div class="social-network-item__left">
+                <span class="social-network-item__left-icon social-network-item__left-icon1"></span>
+              </div>
+              <div class="menu-social-network-item__right">
+                <a href="mailto:support@starleng.com" class="social-network-item__right-link">support@starleng.com</a>
+                <span class="social-network-item__right-desc">technical support</span>
+              </div>
+            </div>
+            <div class="menu-social-network__item">
+              <div class="social-network-item__left">
+                <span class="social-network-item__left-icon social-network-item__left-icon2"></span>
+              </div>
+              <div class="menu-social-network-item__right">
+                <a href="mailto:support@starleng.com" class="social-network-item__right-link">support@starleng.com</a>
+                <span class="social-network-item__right-desc">on advertising</span>
+              </div>
+            </div>
+            <div class="menu-social-network__item">
+              <div class="social-network-item__left">
+                <span class="social-network-item__left-icon3"></span>
+              </div>
+              <div class="menu-social-network-item__right">
+                <a href="https://t.me/" class="social-network-item__right-link">
+                  Telegram
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="main">
+    <section class="help-exchange container">
+      <h1 class="help__title">Help</h1>
+
+      <div class="help__wrapper-tabs">
+        <ul class="help-wrapper-tabs__items">
+          <li class="help-wrapper-tabs__item"><a href="#tabs-1">Application Questions</a></li>
+          <li class="help-wrapper-tabs__item"><a href="#tabs-2">FAQ</a></li>
+        </ul>
+
+        <div class="help-wrapper-tabs__full">
+          <div class="help-tabs__items-content" id="tabs-1">
+
+            <div class="content-help-tabs__item">
+              <div class="item-help-tabs__title">
+                <h2 class="title-item-help-tabs__name">
+                  What is the network load and how to increase the transaction
+                  rate?
+                </h2>
+
+                <span class="title-item-help-tabs__icon"></span>
+              </div>
+
+              <div class="item-help-tabs__text">
+                Network load is the set of transactions in a blockchain that are waiting to be confirmed due to low
+                fees, increased load and other factors. The system is kept running by miners, who use processing power
+                to process transactions and find the necessary hash for the transaction. Transactions with a higher
+                commission are processed first, then miners are accepted for transactions with a lower premium. That's
+                how the queue is formed, with the more profitable transactions in the "head" and the payments with the
+                minimum premium in the "tail".If the sender needs a fast transfer, he sets a higher premium, which
+                ensures that the transaction is included in the block without delays. With savings on fees, a new
+                transaction can take up to 3 days or more. When you create a request on our website, you will be able to
+                see the recommended network fee. This commission will increase the chance of a transaction being
+                confirmed soon.
+              </div>
+            </div>
+
+            <div class="content-help-tabs__item">
+              <div class="item-help-tabs__title">
+                <h2 class="title-item-help-tabs__name">
+                  I verified the card but sent funds from another card
+                </h2>
+
+                <span class="title-item-help-tabs__icon"></span>
+              </div>
+
+              <div class="item-help-tabs__text">
+                We want to inform you about changes in the rules of our exchange service. If we received money from a
+                card different from the verified card, your application will not be processed. Funds will be returned
+                to the card within 24 hours (24 hours), it will also be necessary to pass verification from the card
+                from which the funds were received.
+                Also, if you choose the Yandex Money direction and send funds from a third-party bank, then such
+                applications are not processed, the funds will be returned to the client within 24 hours, the
+                commission is at the client’s expense.
+              </div>
+            </div>
+
+            <div class="content-help-tabs__item">
+              <div class="item-help-tabs__title">
+                <h2 class="title-item-help-tabs__name">
+                  What are Tag and Memo?
+                </h2>
+
+                <span class="title-item-help-tabs__icon"></span>
+              </div>
+
+              <div class="item-help-tabs__text">
+                MEMO is a special identifier used in XRP transactions. In Stellar, the target tag is called memo. Many
+                services, including Freewallet, have one XRP and XLM address for all customers. The only difference is
+                a special set of numbers, called a destination tag, unique to each user. When you are asked to enter a
+                tag or note, do not ignore this action! Otherwise, your funds will be lost and sent to the general
+                balance of the platform, but not to your account. Imagine the tag as the number of your house on a long
+                street. You need to know the exact building number in order for the package to reach its final
+                destination. The same goes for these coins.
+                If you use a personal wallet, using TAG or MEMO is optional. In case you deposit funds on the exchange,
+                TAG or MEMO is mandatory.
+              </div>
+            </div>
+
+            <div class="content-help-tabs__item">
+              <div class="item-help-tabs__title">
+                <h2 class="title-item-help-tabs__name">
+                  My application status is “Deleted”, what should I do?
+                </h2>
+
+                <span class="title-item-help-tabs__icon"></span>
+              </div>
+
+              <div class="item-help-tabs__text">
+                If you see a message on the status of your application “deleted” in your account or mail, look at the
+                reason and re-create the application. You can also always contact the operators of our service by
+                writing to support@starleng.com or chatting on our website.
+              </div>
+            </div>
+
+            <div class="content-help-tabs__item">
+              <div class="item-help-tabs__title">
+                <h2 class="title-item-help-tabs__name">
+                  I made a mistake in the details when creating the application, what should I do?
+                </h2>
+
+                <span class="title-item-help-tabs__icon"></span>
+              </div>
+
+              <div class="item-help-tabs__text">
+                If you specified the wrong details and you noticed it yourself, then you should immediately contact our
+                technical support via chat on the site.
+                If we did not manage to send the funds, then your application will be in error and you will be prompted
+                to correct your application or recreate a new one.
+                If we managed to send the funds, the only thing we can do is tell the details where your funds went.
+                Be careful when entering data!
+              </div>
+            </div>
+
+            <div class="content-help-tabs__item">
+              <div class="item-help-tabs__title">
+                <h2 class="title-item-help-tabs__name">
+                  I forgot to click on the “I paid” button, what should I do?
+                </h2>
+
+                <span class="title-item-help-tabs__icon"></span>
+              </div>
+
+              <div class="item-help-tabs__text">
+                After paying the application for the details provided, you must definitely return to the site and click
+                on the “I paid” button. If you have forgotten or did not have time to do this, we ask you to contact us
+                by chat or by mail. Please provide us with the application number or e-mail that you specified when
+                creating it, and the application will be restored.
+              </div>
+            </div>
+
+            <div class="content-help-tabs__item">
+              <div class="item-help-tabs__title">
+                <h2 class="title-item-help-tabs__name">
+                  I sent funds long ago, but the application has not been processed yet ?!
+                </h2>
+
+                <span class="title-item-help-tabs__icon"></span>
+              </div>
+
+              <div class="item-help-tabs__text">
+                As a rule, such a question is asked by users when sending btc. We want to warn that we are processing
+                the application in this direction after two confirmations from the bitcoin network. How quickly the
+                transaction will receive 2 confirmations depends on the load, as well as on the commission that you
+                spent when sending coins.
+                You can get acquainted with the commission and transaction confirmation time on the
+                website https://bitcoinfees.earn.com/
+                If you follow the link, on the left you will see the commission (in Satoshi) spent on the transaction,
+                on the right - the approximate time of transaction confirmation.
+              </div>
+            </div>
+
+            <div class="content-help-tabs__item">
+              <div class="item-help-tabs__title">
+                <h2 class="title-item-help-tabs__name">
+                  Brought the money from the stock exchange, but they are at the checkout, you delete the application?
+                </h2>
+
+                <span class="title-item-help-tabs__icon"></span>
+              </div>
+
+              <div class="item-help-tabs__text">
+                Dear user, in this case you need to contact us in a chat on the site or by mail and write about the
+                situation. Of course we will restore your application, you should not worry. But we want to warn you
+                that if the funds are not received within 8 hours, then you will need to recreate the application at
+                the current rate.
+                When contacting the operator, you need to specify the application number, as well as send a screenshot
+                to the mail about the withdrawal of funds, where the sender / recipient address, amount, time and hash
+                of the transaction are visible.
+              </div>
+            </div>
+
+            <div class="content-help-tabs__item">
+              <div class="item-help-tabs__title">
+                <h2 class="title-item-help-tabs__name">
+                  I received a notification that the application status is "wrong."
+                </h2>
+
+                <span class="title-item-help-tabs__icon"></span>
+              </div>
+
+              <div class="item-help-tabs__text">
+                The application may be erroneous in several cases:
+                1. You entered the card number / wallet number / address of the recipient or sender incorrectly.
+                2. You have incorrectly indicated the transfer amount.
+                3. You have incorrectly indicated the name of the sender / receiver card.
+                What to do?
+                You need to contact technical support on the site via chat in the lower right corner, or write to us by
+                telegram or e-mail and provide the correct information. The application will be edited and restored.
+              </div>
+            </div>
+
+            <div class="content-help-tabs__item">
+              <div class="item-help-tabs__title">
+                <h2 class="title-item-help-tabs__name">
+                  How much time is given to create an application?
+                </h2>
+
+                <span class="title-item-help-tabs__icon"></span>
+              </div>
+
+              <div class="item-help-tabs__text">
+                You have 15 minutes to create an application. If for some reason you did not manage to complete the
+                application at the indicated time, then the application disappears automatically. In this case, please
+                contact the chat on the site to resolve the issue as soon as possible.
+              </div>
+            </div>
+
+            <div class="content-help-tabs__item">
+              <div class="item-help-tabs__title">
+                <h2 class="title-item-help-tabs__name">
+                  I created an application and paid, but the money did not come to me. What should I do and what is the
+                  reason?
+                </h2>
+
+                <span class="title-item-help-tabs__icon"></span>
+              </div>
+
+              <div class="item-help-tabs__text">
+                In order for the exchange to be successfully completed, please make sure that you have done everything
+                correctly:
+                1. Check that your details for the transfer are correct (wallet, account or card). If you made a mistake
+                and the data are incorrect, your application will receive a code “Erroneous”, after which you will
+                receive a letter in the mail with a description of the reason. If the funds at your request were sent to
+                the wrong details, a refund is not possible. We recommend that you carefully verify the correctness of
+                the data you specify;
+                2. Check if funds have been debited from your account. If we do not see the transfer of funds from you,
+                then the application will be deleted.
+                3. In rare cases, it is possible to change the time of the transfer by the bank or the payment system.
+                In this situation, you can contact us in technical support or technical support of the payment system /
+                bank to find out the reason.
+                4. There is a possibility that you have an individual problem. If your reason is not listed, then you
+                can write to us at support@starleng.com or chat on our website, which is located in the lower right
+                corner. We will do our best to help you!
+              </div>
+            </div>
+            <div class="content-help-tabs__item">
+              <div class="item-help-tabs__title">
+                <h2 class="title-item-help-tabs__name">
+                  How to create an application?
+                </h2>
+
+                <span class="title-item-help-tabs__icon"></span>
+              </div>
+
+              <div class="item-help-tabs__text">
+                To create an application, you need to follow our instructions:
+                1. Select the direction of the exchange (for example: in the “Give” column - Bitcoin, in the “Receive”
+                column - UPI) and indicate the amount you want to exchange or receive.
+                2. Fill in your data in the “Data Entry” column, namely, indicate your e-mail, the number of the
+                Sberbank card for which you want to receive money.
+                3. Check the box “I agree with the exchange rules” and read them.
+                3. Read the “rules of exchange” and check the consent box.
+                4. Click the "Go to payment" button, after which you will see our details for the transfer in a pop-up
+                window.
+                5. Copy our details, go to your Bitcoin wallet. Insert the amount indicated in the application and our
+                details. Confirm the transfer. Be sure to make sure that the amount you have been debited.
+                6. Next, return to our website and confirm the payment by clicking on the “I paid” button. Done.
+                7. If you are registered on our website, after creating the application, you will receive a letter in
+                the mail with the status of your application. If you are not registered, expect funds to be credited.
+              </div>
+            </div>
+            <div class="content-help-tabs__item">
+              <div class="item-help-tabs__title">
+                <h2 class="title-item-help-tabs__name">
+                  How to find out about the status of my application?
+                </h2>
+
+                <span class="title-item-help-tabs__icon"></span>
+              </div>
+
+              <div class="item-help-tabs__text">
+                In your account you can always track the status of your application in the “My Applications”
+                section. In addition, we will certainly send you information on the status of the execution of the
+                application for the mail that you indicated during registration. You can also check the status of
+                the application with the operator by writing us a “chat” or telegram.
+              </div>
+            </div>
+          </div>
+
+          <div class="help-tabs__items-content" id="tabs-2">
+
+            <div class="content-help-tabs__item">
+              <div class="item-help-tabs__title">
+                <h2 class="title-item-help-tabs__name">
+                  What can I do if I didn't receive the email?
+                </h2>
+
+                <span class="title-item-help-tabs__icon"></span>
+              </div>
+
+              <div class="item-help-tabs__text">
+                In order to recover your password, you need to click on the "Forgot your password?" Button on the
+                authorization page in your personal account. Next, you will need to specify your e-mail address, to
+                which you will receive a letter with a link to reset your password. In case the letter did not come
+                to
+                your mail, check the "Spam" folder.
+              </div>
+            </div>
+
+            <div class="content-help-tabs__item">
+              <div class="item-help-tabs__title">
+                <h2 class="title-item-help-tabs__name">
+                  The browser says to clear cookies and cache. What is it and how to do it?
+                </h2>
+
+                <span class="title-item-help-tabs__icon"></span>
+              </div>
+
+              <div class="item-help-tabs__text">
+                The browser says to clear cookies and cache. What is it and how to do it?
+                The web pages of our site may not display correctly due to the fact that they have been changed, and
+                your browser continues to use outdated data from the cache.
+                In such cases, we ask you to clear the cookies and cache in order for all the functionality to work
+                fully and faultlessly.
+                How to clear cookies and cache in your browser
+              </div>
+            </div>
+            <div class="content-help-tabs__item">
+              <div class="item-help-tabs__title">
+                <h2 class="title-item-help-tabs__name">
+                  The browser says to clear cookies and cache. What is it and how to do it?
+                </h2>
+
+                <span class="title-item-help-tabs__icon"></span>
+              </div>
+
+              <div class="item-help-tabs__text">
+                The web pages of our site may not display correctly due to the fact that they have been changed, and
+                your browser continues to use outdated data from the cache.
+                In such cases, we ask you to clear the cookies and cache in order for all the functionality to work
+                fully and faultlessly.
+                How to clear cookies and cache in your browser
+              </div>
+            </div>
+            <div class="content-help-tabs__item">
+              <div class="item-help-tabs__title">
+                <h2 class="title-item-help-tabs__name">
+                  What are the minimum / maximum exchange amounts?
+                </h2>
+
+                <span class="title-item-help-tabs__icon"></span>
+              </div>
+
+              <div class="item-help-tabs__text">
+                You can find out the maximum or minimum amount of exchange by selecting the desired direction on our
+                website. Also, all min and maximum amounts are visible on bestchange.com
+              </div>
+            </div>
+            <div class="content-help-tabs__item">
+              <div class="item-help-tabs__title">
+                <h2 class="title-item-help-tabs__name">
+                  I need a transfer to a bank / payment system / cryptocurrency which you do not have, what should I
+                  do?
+                </h2>
+
+                <span class="title-item-help-tabs__icon"></span>
+              </div>
+
+              <div class="item-help-tabs__text">
+                You should write to our chat or e-mail support@starleng.com and describe your situation, leaving
+                contacts for communication. Your question will be considered individually.
+              </div>
+            </div>
+            <div class="content-help-tabs__item">
+              <div class="item-help-tabs__title">
+                <h2 class="title-item-help-tabs__name">
+                  I have an offer for you
+                </h2>
+
+                <span class="title-item-help-tabs__icon"></span>
+              </div>
+
+              <div class="item-help-tabs__text">
+                If you have a proposal for cooperation, you can write to our support@starleng.com mail and we will
+                certainly consider your offer and give an answer within a day.
+              </div>
+            </div>
+            <div class="content-help-tabs__item">
+              <div class="item-help-tabs__title">
+                <h2 class="title-item-help-tabs__name">
+                  Can I cancel an exchange if I have already made a transfer?
+                </h2>
+
+                <span class="title-item-help-tabs__icon"></span>
+              </div>
+
+              <div class="item-help-tabs__text">
+                If you created a request and made a transfer, then you can’t refuse a transaction. But you can always
+                make a reverse application, but in this case the entire commission is covered by the client.
+              </div>
+            </div>
+            <div class="content-help-tabs__item">
+              <div class="item-help-tabs__title">
+                <h2 class="title-item-help-tabs__name">
+                  Why does not notification about the created application come?
+                </h2>
+
+                <span class="title-item-help-tabs__icon"></span>
+              </div>
+
+              <div class="item-help-tabs__text">
+                Notification of created applications comes only to authorized users on our website.
+              </div>
+            </div>
+            <div class="content-help-tabs__item">
+              <div class="item-help-tabs__title">
+                <h2 class="title-item-help-tabs__name">
+                  How and how much is the rate fixed?
+                </h2>
+
+                <span class="title-item-help-tabs__icon"></span>
+              </div>
+
+              <div class="item-help-tabs__text">
+                You do not need to worry about the jump in courses if you exchange with us! Because the course is fixed
+                as soon as you begin to create an application and remains for 15 minutes.
+              </div>
+            </div>
+            <div class="content-help-tabs__item">
+              <div class="item-help-tabs__title">
+                <h2 class="title-item-help-tabs__name">
+                  What is the exchange fee?
+                </h2>
+
+                <span class="title-item-help-tabs__icon"></span>
+              </div>
+
+              <div class="item-help-tabs__text">
+                Our site does not include fees for any additional fees. Commissions are debited by banks or payment
+                systems depending on their tariffs. The fee for sending funds to the client is paid by us or it is laid
+                down in the exchange rate.
+                You can see the exchange rate on the main page of our website, choosing the desired direction, or you
+                can familiarize yourself with this information at various monitoring with which we cooperate.
+              </div>
+            </div>
+            <div class="content-help-tabs__item">
+              <div class="item-help-tabs__title">
+                <h2 class="title-item-help-tabs__name">
+                  I do not have enough reserves, what to do in such a situation?
+                </h2>
+
+                <span class="title-item-help-tabs__icon"></span>
+              </div>
+
+              <div class="item-help-tabs__text">
+                In each direction, we have a certain reserve, but a situation may arise when you need more than the site
+                could offer. In this case, please write to us in a chat or by mail, with a request to increase reserves
+                in the direction you need. We are happy to do our best to ensure that you receive the necessary amount!
+              </div>
+            </div>
+            <div class="content-help-tabs__item">
+              <div class="item-help-tabs__title">
+                <h2 class="title-item-help-tabs__name">
+                  Do I have to register on the site /////?
+                </h2>
+
+                <span class="title-item-help-tabs__icon"></span>
+              </div>
+
+              <div class="item-help-tabs__text">
+                Registration on our website is not required, but after the first application is created, registration is
+                automatically sent to the mail that you indicated in the application. In addition, you can register
+                yourself using the form on the site. The advantage of registration is that you can track the history of
+                your applications, as well as use the referral program. The referral link is in the user's account.
+              </div>
+            </div>
+
+            <div class="content-help-tabs__item">
+              <div class="item-help-tabs__title">
+                <h2 class="title-item-help-tabs__name">
+                  Why do I need card verification and what is it?
+                </h2>
+
+                <span class="title-item-help-tabs__icon"></span>
+              </div>
+
+              <div class="item-help-tabs__text">
+                Card verification is a procedure that increases the security of your personal data inside our exchange
+                service. To verify the card, you must upload a photo of a bank card in the background of our site.
+                1. Photo must be in jpeg / png format and not exceed 5 MB in size
+                2. The photo should be on the background of our site, where the application number is also visible
+                3. Card details must be clearly visible, otherwise the verification will be rejected. You can close the
+                second or third block of four digits
+                4. If you do not have the opportunity to photograph the map on the background of our site, you can write
+                to us in the chat. The operator will tell you.
+                5. Online card verification is not possible!
+                After verifying the card, you will be able to make applications using this card in 3 clicks. </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer container wow fadeIn" data-wow-duration="1.5s">
+    <div class="social__network">
+      <div class="social-network__item">
+        <div class="social-network-item__left">
+          <span class="social-network-item__left-icon social-network-item__left-icon1"></span>
+        </div>
+        <div class="social-network-item__right">
+          <a href="mailto:support@starleng.com" class="social-network-item__right-link">support@starleng.com</a>
+          <span class="social-network-item__right-desc">technical support</span>
+        </div>
+      </div>
+      <div class="social-network__item">
+        <div class="social-network-item__left">
+          <span class="social-network-item__left-icon social-network-item__left-icon2"></span>
+        </div>
+        <div class="social-network-item__right">
+          <a href="mailto:support@starleng.com" class="social-network-item__right-link">support@starleng.com</a>
+          <span class="social-network-item__right-desc">on advertising</span>
+        </div>
+      </div>
+      <div class="social-network__item">
+        <div class="social-network-item__left">
+          <span class="social-network-item__left-icon3"></span>
+        </div>
+        <div class="social-network-item__right">
+          <a href="https://t.me/" class="social-network-item__right-link">
+            Telegram
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer__info">
+      ©️ S.R.L. BLOCKCHAIN-SERVICE 2019-2024
+    </div>
+  </footer>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/wowjs@1.1.3/dist/wow.min.js"></script>
+  <script src="./assets/js/libs/swiper-bundle.min.js"></script>
+  <script src="./assets/js/libs/jquery-3.7.1.min.js"></script>
+  <script src="./assets/js/libs/jquery-ui.min.js"></script>
+  <script src="./assets/js/libs/jquery.validate.min.js"></script>
+  <script src="./assets/js/main.js"></script>
+</body>
+
+</html>

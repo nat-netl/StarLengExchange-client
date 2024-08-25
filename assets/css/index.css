@@ -65,6 +65,7 @@ button {
 }
 
 .home__link {
+  display: flex;
   margin-right: 61px;
 }
 
@@ -96,11 +97,19 @@ button {
   margin-right: 38px;
   background-image: url("./../images/main/menu-icon.svg");
   background-repeat: no-repeat;
+  transition: none;
 }
 
+.home,
+.menu-social__network {
+  display: none;
+}
+.header__nav {
+  display: flex;
+}
 @media screen and (max-width: 820px) {
   .header {
-    padding: 13px 22px;
+    padding: 13px 19px;
   }
 
   .home__link {
@@ -113,9 +122,39 @@ button {
 }
 
 @media screen and (max-width: 670px) {
+  .header__wrapper._active-menu {
+    height: 100%;
+    overflow: hidden;
+    overflow-y: scroll;
+  }
+
+  .menu__wrapper {
+    opacity: 0;
+    display: none;
+    padding: 40px 0 25px 0;
+    border-radius: 0 0 14px 14px;
+  }
+
+  ._active-menu .menu__wrapper {
+    display: block !important;
+    animation: showBurger 2.5s forwards;
+  }
+
+  @keyframes showBurger {
+    100% {
+      background-color: #ffca3a;
+      display: block;
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  ._active-menu .menu-btn {
+    background-image: url("./../images/main/black-close.svg");
+  }
+
   .home__link {
     margin-right: 0;
-    display: flex;
   }
 
   .menu-btn {
@@ -123,7 +162,95 @@ button {
   }
 
   .route__items {
-    display: none
+    flex-direction: column;
+    gap: 28px;
+    padding-bottom: 94px;
+    margin-bottom: 32px;
+    border-bottom: 2px solid #ffffff;
+  }
+
+  .home {
+    display: flex;
+  }
+
+  .route__item {
+    font-weight: bold;
+    display: flex;
+    gap: 13px;
+    align-items: center;
+  }
+
+  .route__items li .route__item::before {
+    content: "";
+    background-repeat: no-repeat;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    background-size: contain;
+  }
+
+  .route__items li:nth-child(1) .route__item::before {
+    background-image: url("./../images/main/home-icon.svg");
+  }
+  .route__items li:nth-child(2) .route__item::before {
+    background-image: url("./../images/main/i-icon.svg");
+  }
+  .route__items li:nth-child(3) .route__item::before {
+    background-image: url("./../images/main/book-icon.svg");
+  }
+  .route__items li:nth-child(4) .route__item::before {
+    background-image: url("./../images/main/mail-icon.svg");
+  }
+  .route__items li:nth-child(5) .route__item::before {
+    background-image: url("./../images/main/blank-icon.svg");
+  }
+
+  .menu-social__network {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .menu-social-network__item {
+    display: flex;
+    align-items: center;
+    gap: 27px;
+  }
+
+  .menu-social-network__item .social-network-item__left-icon,
+  .menu-social-network__item .social-network-item__left {
+    width: 44px;
+    height: 44px;
+  }
+  .menu-social-network__item .social-network-item__left-icon {
+    background-size: 26px;
+  }
+
+  .menu-social-network-item__right {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .menu-social-network-item__right .social-network-item__right-link {
+    font-size: 16px;
+  }
+
+  .menu-social-network-item__right .social-network-item__right-desc {
+    font-size: 12px;
+  }
+
+  .menu-social-network__item .social-network-item__left-icon3 {
+    width: 44px;
+    height: 44px;
+    background-size: 44px;
+  }
+
+  .menu__wrapper {
+    width: 100%;
+  }
+  .header {
+    flex-direction: column;
+    align-items: start;
   }
 }
 
@@ -1685,8 +1812,9 @@ label.error {
   .calculator-bottom__receive {
     margin-bottom: 39px;
   }
-  
-  .calculator-bottom-send__title, .calculator-tabs__items {
+
+  .calculator-bottom-send__title,
+  .calculator-tabs__items {
     padding-left: 11px;
   }
 
@@ -1695,7 +1823,7 @@ label.error {
     font-size: 25px;
   }
 
-  .calculator-bottom__exchange, 
+  .calculator-bottom__exchange,
   .calculator-exchange-details-form-block__input,
   .calculator-result-crypto__info {
     max-width: 100%;
@@ -1715,7 +1843,6 @@ label.error {
     max-width: 100%;
     padding: 16px 12px 18px 12px;
   }
-  
 
   .calculator-bottom__send {
     margin-bottom: 43px;
@@ -1748,7 +1875,8 @@ label.error {
     grid-auto-flow: column;
   }
 
-  .calculator-bottom__send, .calculator-bottom__receive {
+  .calculator-bottom__send,
+  .calculator-bottom__receive {
     height: 100%;
   }
 
@@ -1782,7 +1910,8 @@ label.error {
     margin-bottom: 22px;
   }
 
-  .calculator-exchange-details__title, .calculator-exchange-result__title {
+  .calculator-exchange-details__title,
+  .calculator-exchange-result__title {
     font-size: 25px;
   }
 
@@ -1799,7 +1928,7 @@ label.error {
     font-weight: 600;
     font-size: 16px;
   }
-  
+
   .calculator-exchange-details-form__blocks {
     margin-bottom: 27px;
   }
@@ -1824,5 +1953,196 @@ label.error {
 
   .feedbacks-swiper {
     overflow: hidden;
+  }
+
+  .feedback-info__name {
+    font-size: 14px;
+  }
+}
+
+/* 
+///////////////////////
+  Exchange rules
+///////////////////////
+*/
+
+.help-exchange {
+  margin-bottom: 61px;
+}
+
+.help__title {
+  font-size: clamp(25px, 4vw, 32px);
+  color: #595959;
+  margin-bottom: 41px;
+}
+
+.help__wrapper-tabs {
+  display: flex;
+  gap: 43px;
+  justify-content: space-between;
+}
+
+.help-wrapper-tabs__items {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-width: 216px;
+}
+
+.help-wrapper-tabs__item {
+  display: flex;
+  align-items: center;
+}
+
+.help-wrapper-tabs__item a {
+  font-size: 16px;
+  color: #595959;
+}
+
+.help-wrapper-tabs__item.ui-tabs-active a,
+.help-wrapper-tabs__item.ui-state-active {
+  color: #35bd00;
+  background-color: unset !important;
+}
+
+.help-wrapper-tabs__item a {
+  padding-left: 8px;
+}
+
+.help-wrapper-tabs__item.ui-tabs-active::before {
+  content: "";
+  display: flex;
+  width: 2px;
+  height: 27px;
+  background-color: #35bd00;
+  position: absolute;
+}
+
+.content-help-tabs__item {
+  width: 630px;
+  padding: 16px 20px 19px 26px;
+  -webkit-box-shadow: 0px 2px 8px 1px rgba(34, 60, 80, 0.2);
+  -moz-box-shadow: 0px 2px 8px 1px rgba(34, 60, 80, 0.2);
+  box-shadow: 0px 2px 8px 1px rgba(34, 60, 80, 0.2);
+  border-radius: 13px;
+  overflow: hidden;
+}
+
+.title-item-help-tabs__name {
+  font-size: 14px;
+  width: 100%;
+}
+
+.title-item-help-tabs__icon {
+  background-image: url("./../images/main/push-arrow-bottom.svg");
+  background-repeat: no-repeat;
+  width: 25px;
+  height: 14px;
+  transition: all 0.6s;
+}
+
+.item-help-tabs__text {
+  font-size: 11px;
+  margin-top: 28px;
+  display: none;
+}
+
+.item-help-tabs__title {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+._active-help .title-item-help-tabs__icon {
+  transform: rotate(180deg);
+}
+
+.help-tabs__items-content {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.help-wrapper-tabs__full-exchange {
+  width: 100%;
+  -webkit-box-shadow: 0px 2px 8px 1px rgba(34, 60, 80, 0.2);
+  -moz-box-shadow: 0px 2px 8px 1px rgba(34, 60, 80, 0.2);
+  box-shadow: 0px 2px 8px 1px rgba(34, 60, 80, 0.2);
+  padding: 43px 37px 29px 21px;
+  border-radius: 24px;
+
+}
+
+.help-tabs__items-content-item {
+  font-size: 11px;
+}
+
+
+.help-tabs__items-content-item,
+.help-tabs__items-content-item p,
+.help-tabs__items-content-item strong, 
+.item-help-tabs__items-content-list li {
+  color: #595959;
+}
+
+.item-help-tabs__items-content-title {
+  color: #595959;
+  font-size: 14px;
+}
+
+.item-help-tabs__items-content-list {
+  padding-left: 20px;
+}
+
+.item-help-tabs__items-content-list li {
+  list-style-type: disc;
+}
+
+@media screen and (max-width: 1020px) {
+  .content-help-tabs__item {
+    width: 100%;
+  }
+}
+
+
+@media screen and (max-width: 670px) {
+  .help__wrapper-tabs {
+    flex-direction: column;
+  }
+
+  .help-wrapper-tabs__items {
+    flex-direction: row;
+    max-width: 100%;
+    width: 669px;
+    padding-bottom: 5px;
+    gap: 30px;
+    overflow: auto;
+    overflow-x: scroll;
+    align-items: baseline;
+  }
+
+  .help-wrapper-tabs__item  {
+    position: relative;
+  }
+
+  .help-wrapper-tabs__item a {
+    max-width: 290px;
+    padding-left: 0;
+  }
+  
+  .help-wrapper-tabs__item {
+    padding-bottom: 6px;
+  }
+
+  .help-wrapper-tabs__item.ui-tabs-active::before {
+    width: 100%;
+    height: 2px;
+    bottom: 0;
+  }
+
+  .help__wrapper-tabs {
+    gap: 15px;
   }
 }

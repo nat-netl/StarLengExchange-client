@@ -4,6 +4,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="initial-scale=1, width=device-width" />
+  <link href="https://cdn.jsdelivr.net/npm/wowjs@1.1.3/css/libs/animate.min.css" rel="stylesheet">
 
   <link rel="stylesheet" href="./assets/css/index.css" />
   <link rel="stylesheet" href="./assets/css/swiper.css" />
@@ -19,16 +20,54 @@
   <header class="container">
     <div class="header__wrapper">
       <div class="header">
-        <a href="/" class="home__link">
-          <img src="./assets/images/main/logo.svg" />
-        </a>
+        <div class="header__nav">
+          <a class="menu-btn"></a>
   
-        <ul class="route__items">
-          <li><a href="/about_us.html" class="route__item">About us</a></li>
-          <li><a href="" class="route__item">Exchange rules</a></li>
-          <li><a href="" class="route__item">Help</a></li>
-          <li><a href="" class="route__item">AML/KYC</a></li>
-        </ul>
+          <a href="/" class="home__link">
+            <img src="./assets/images/main/logo.svg" />
+          </a>
+        </div>
+  
+        <div class="menu__wrapper">
+          <ul class="route__items">
+            <li><a href="/" class="route__item home">Home</a></li>
+            <li><a href="/about_us.html" class="route__item">About us</a></li>
+            <li><a href="/exchange_rules.html" class="route__item">Exchange rules</a></li>
+            <li><a href="/help.html" class="route__item">Help</a></li>
+            <li><a href="/aml.html" class="route__item">AML/KYC</a></li>
+          </ul>
+
+          <div class="menu-social__network">
+            <div class="menu-social-network__item">
+              <div class="social-network-item__left">
+                <span class="social-network-item__left-icon social-network-item__left-icon1"></span>
+              </div>
+              <div class="menu-social-network-item__right">
+                <a href="mailto:support@starleng.com" class="social-network-item__right-link">support@starleng.com</a>
+                <span class="social-network-item__right-desc">technical support</span>
+              </div>
+            </div>
+            <div class="menu-social-network__item">
+              <div class="social-network-item__left">
+                <span class="social-network-item__left-icon social-network-item__left-icon2"></span>
+              </div>
+              <div class="menu-social-network-item__right">
+                <a href="mailto:support@starleng.com" class="social-network-item__right-link">support@starleng.com</a>
+                <span class="social-network-item__right-desc">on advertising</span>
+              </div>
+            </div>
+            <div class="menu-social-network__item">
+              <div class="social-network-item__left">
+                <span class="social-network-item__left-icon3"></span>
+              </div>
+              <div class="menu-social-network-item__right">
+                <a href="https://t.me/" class="social-network-item__right-link">
+                  Telegram
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </header>
@@ -212,7 +251,7 @@
     </div>
   </main>
 
-  <footer class="footer container">
+  <footer class="footer container wow fadeIn" data-wow-duration="1.5s">
     <div class="social__network">
       <div class="social-network__item">
         <div class="social-network-item__left">
@@ -250,6 +289,7 @@
   </footer>
 
 
+  <script src="https://cdn.jsdelivr.net/npm/wowjs@1.1.3/dist/wow.min.js"></script>
   <script src="./assets/js/libs/swiper-bundle.min.js"></script>
   <script src="./assets/js/libs/jquery-3.7.1.min.js"></script>
   <script src="./assets/js/libs/jquery-ui.min.js"></script>

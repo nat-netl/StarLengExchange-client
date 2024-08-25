@@ -1,8 +1,10 @@
+// AOS.init();
+new WOW().init();
+
 const swiper = new Swiper(".swiper", {
   loop: true,
   slidesPerView: 1,
   centeredSlides: true,
-  loop: true,
   spaceBetween: 68,
   pagination: {
     el: ".swiper-pagination",
@@ -24,11 +26,10 @@ const swiper = new Swiper(".swiper", {
 
 if (document.documentElement.clientWidth <= 920) {
   const swiperFeedback = new Swiper(".feedbacks-swiper", {
-    loop: true,
     slidesPerView: 2,
     centeredSlides: true,
     loop: true,
-    spaceBetween: 40,
+    spaceBetween: 30,
     pagination: {
       el: ".swiper-pagination",
     },
@@ -59,6 +60,8 @@ $(".calculator-bottom__receive #tabs-1").each(function () {
   ).clone();
   $(this).append(sharedElement);
 });
+
+$(".help__wrapper-tabs").tabs();  
 
 async function getCoinByIdJson(id) {
   const file = "/assets/js/currencies.json";
@@ -165,7 +168,6 @@ $(document).ready(function () {
         $(".calculator-recerve-top__total").html(
           `${send.amount} ${send.altName}`
         );
-
       } else if (send.type === "bank" && receive.type === "coin") {
         // Reserve
         $(".calculator-recerve-top__total").html(
@@ -532,12 +534,23 @@ $(document).ready(function () {
       localStorage.setItem("stage", "final")
     }
   );
-   // Open element
-   $('.order__details .js-open').click(function(){
+  // Open element
+  $('.order__details .js-open').click(function(){
 		$(this).children('.js-arrow').toggleClass("open-arrow");	 
 		$(this).next('.js-content, .js-open').toggleClass("open-element");	 
     $(this).next('.js-content').slideToggle(400);	 
 	});
+
+  // Open menu
+  $('.menu-btn').click(function(){
+    $(".header__wrapper").toggleClass("_active-menu")
+	});
+
+  // Open help
+  $('.item-help-tabs__title').click(function(){
+    $(this).parent('.content-help-tabs__item').toggleClass('_active-help');
+    $(this).siblings('.item-help-tabs__text').slideToggle(500);
+    });
 
   // copy by click
 });
