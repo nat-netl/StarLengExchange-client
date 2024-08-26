@@ -7,6 +7,7 @@
 
 body,
 html {
+  overflow-x: hidden;
 }
 
 a {
@@ -242,7 +243,8 @@ button {
   .menu-social-network__item .social-network-item__left-icon3 {
     width: 44px;
     height: 44px;
-    background-size: 44px;
+    background-size: 48px;
+    background-image: url("./../images/main/telegram-mobile.svg");
   }
 
   .menu__wrapper {
@@ -489,9 +491,9 @@ button {
 
 .reviews .swiper {
   max-height: 200px;
-  max-width: 1280px;
+  max-width: 1245px;
   width: 100%;
-  padding: 0 171px !important;
+  padding: 0 145px !important;
   position: relative;
 }
 
@@ -625,6 +627,11 @@ button {
   width: 25px;
   height: 25px;
   background-image: url("./../images/main/telegram.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 27px;
+  background-color: #FFFF;
+  border-radius: 338px; 
 }
 
 .social-network-item__right {
@@ -680,6 +687,9 @@ button {
 }
 
 @media screen and (max-width: 670px) {
+  .introduction__left {
+    height: 164px;
+  }
   .introduction-right__cicle {
     width: 116px;
     height: 116px;
@@ -688,10 +698,21 @@ button {
 
   .introduction-left__title {
     margin-bottom: 20px;
+    max-width: 229px;
+  }
+
+  .introduction-left__text {
+    font-size: 10px;
+    position: absolute;
+    max-width: 304px;
   }
 
   .hand {
     display: none;
+  }
+  .introduction {
+    gap: 15px;
+    justify-content: space-between;
   }
 
   .introduction,
@@ -850,7 +871,7 @@ button {
   max-width: 309px;
   height: 603px;
   width: 100%;
-  padding: 10px 4px 33px 7px;
+  padding: 10px 4px 33px 3px;
   background-color: #ffff;
   -webkit-box-shadow: 0px 0px 8px 0px rgba(34, 60, 80, 0.2);
   -moz-box-shadow: 0px 0px 8px 0px rgba(34, 60, 80, 0.2);
@@ -870,15 +891,18 @@ button {
   overflow-y: hidden;
   overflow-y: scroll;
   height: 510px;
-  padding: 5px 3px 4px 5px;
+  padding: 5px 3px 4px 1px;
 }
 .calculator-tabs__full::-webkit-scrollbar {
   width: 4px;
+  display: block !important;
+  -webkit-appearance: none;
 }
 
 .calculator-tabs__full::-webkit-scrollbar-thumb {
   border-radius: 4px;
   background-color: #6c6ea0;
+  display: block !important;
 }
 
 .calculator-bottom-send__title {
@@ -923,7 +947,7 @@ button {
   border: none;
   outline: none;
   display: flex;
-  gap: 7px;
+  gap: 4px;
   align-items: center;
 }
 
@@ -1958,6 +1982,27 @@ label.error {
   .feedback-info__name {
     font-size: 14px;
   }
+
+  .feedbacks-swiper {
+    max-width: 1445px;
+    position: relative;
+    margin: 0 -109px;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .item-block__currency {
+    width: 115px;
+  }
+
+  .calculator-tabs__items-content {
+    grid-template-columns: 115px 115px 115px 115px;
+  }
+
+  .item-block-currency__image {
+    width: 55px !important;
+    height: 55px !important;
+  }
 }
 
 /* 
@@ -2087,6 +2132,11 @@ label.error {
   color: #595959;
 }
 
+.help-tabs__items-content-item strong,
+.item-help-tabs__items-content-title {
+  font-weight: 800;
+}
+
 .item-help-tabs__items-content-title {
   color: #595959;
   font-size: 14px;
@@ -2144,5 +2194,41 @@ label.error {
 
   .help__wrapper-tabs {
     gap: 15px;
+  }
+
+  .help-exchange .help-wrapper-tabs__items li:nth-child(1) a {
+    width: 208px;
+  }
+
+  .help-exchange .help-wrapper-tabs__items li:nth-child(2) a {
+    width: 141px;
+  }
+
+  .help-exchange .help-wrapper-tabs__items li:nth-child(3) a {
+    width: 215px;
+  }
+
+  .aml .help-wrapper-tabs__items li:nth-child(1) a {
+    width: 74px;
+  }
+
+  .aml .help-wrapper-tabs__items li:nth-child(2) a {
+    width: 208px;
+  }
+
+  .aml .help-wrapper-tabs__items li:nth-child(3) a {
+    width: 141px;
+  }
+
+  .aml .help-wrapper-tabs__items li:nth-child(4) a {
+    width: 215px;
+  }
+
+  .help .help-wrapper-tabs__items li:nth-child(1) a {
+    width: 166px;
+  }
+
+  .help .help-wrapper-tabs__items li:nth-child(2) a {
+    width: 32px;
   }
 }

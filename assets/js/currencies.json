@@ -22,7 +22,7 @@
             "altImg": "images/dist/XRP.png",
             "amount": 0,
             "minExchange": "17.32",
-            "maxExchange": "17.32"
+            "maxExchange": "246899.23"
         },
         {
             "id": 5426,
@@ -34,7 +34,7 @@
             "altImg": "images/dist/SOL.svg",
             "amount": 0,
             "minExchange": "0.065",
-            "maxExchange": "0.065"
+            "maxExchange": "10578.67"
         },
         {
             "id": 1,
@@ -46,7 +46,7 @@
             "altImg": "Bitcoin",
             "amount": 0,
             "minExchange": "0.000164",
-            "maxExchange": "0.000164"
+            "maxExchange": "11.92"
         },
         {
             "id": 1027,
@@ -58,7 +58,7 @@
             "altImg": "Ethereum",
             "amount": 0,
             "minExchange": "0.00376",
-            "maxExchange": "0.00376"
+            "maxExchange": "1219.88"
         },
         {
             "id": 1839,
@@ -70,7 +70,7 @@
             "altImg": "images/dist/BNB.svg",
             "amount": 0,
             "minExchange": "0.01904",
-            "maxExchange": "0.01904"
+            "maxExchange": "6432.66"
         },
         {
             "id": 825,
@@ -82,7 +82,7 @@
             "altImg": "images/dist/USDT.svg",
             "amount": 0,
             "minExchange": "10",
-            "maxExchange": "10"
+            "maxExchange": "2986749.11"
         },
         {
             "id": 825,
@@ -106,7 +106,7 @@
             "altImg": "images/dist/DOT.svg",
             "amount": 0,
             "minExchange": "2.110",
-            "maxExchange": "2.110"
+            "maxExchange": "55289.23"
         },
         {
             "id": 74,
@@ -118,7 +118,7 @@
             "altImg": "images/dist/Free-Charge-P-min.svg",
             "amount": 0,
             "minExchange": "92.3",
-            "maxExchange": "92.3"
+            "maxExchange": "10098473.73"
         },
         {
             "id": 2010,
@@ -130,7 +130,7 @@
             "altImg": "images/dist/ADA.svg",
             "amount": 0,
             "minExchange": "28.69",
-            "maxExchange": "28.69"
+            "maxExchange": "5890.78"
         },
         {
             "id": 1958,
@@ -142,7 +142,7 @@
             "altImg": "images/dist/TRX.svg",
             "amount": 0,
             "minExchange": "77.89",
-            "maxExchange": "77.89"
+            "maxExchange": "65243.65"
         }
     ]
 }
