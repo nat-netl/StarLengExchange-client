@@ -115,6 +115,9 @@ $(document).ready(function () {
         $(".qr-info__code, .content-address-info-details-under__code").html(send.code)
         // final stage address
         $(".address-info-final-payment__code").html(transformationAddress(send.code))
+        // phone input
+        $(".phone_number .calculator-exchange-details-form-block__name").html(`You ${receive.currency} address`)
+        $(".phone_number .calculator-exchange-details-form-block__input").attr("placeholder", `You ${receive.currency} address`);
       } else if (send.type === "bank" && receive.type === "coin") {
         //images in details
         $(".first-convert-item .icon-item-order__img").attr("src", `assets/${receive.img}`);
@@ -130,23 +133,25 @@ $(document).ready(function () {
         $(".qr-info__code, .content-address-info-details-under__code").html(receive.code)
         // final stage address
         $(".address-info-final-payment__code").html(transformationAddress(receive.code))
+        // phone input
+        $(".phone_number .calculator-exchange-details-form-block__name").html(`You ${send.currency} address`)
+        $(".phone_number .calculator-exchange-details-form-block__input").attr("placeholder", `You ${send.currency} address`);
       } else if (send.type === "coin" && receive.type === "coin") {
         //images in details
         $(".first-convert-item .icon-item-order__img").attr("src", `assets/${send.img}`);
         $(".second-convert-item .icon-item-order__img").attr("src", `assets/${receive.img}`);
 
         $(".send, .address-info-final-payment__amount").html(`${send.amount} ${send.altName}`)
-        $(".recieve").html(`${totalPrice} ${receive.altName}`)
         // upi address in details
-        if (user) $(".upi-address").html(`Address: UPI ${user[1].value}`)
+        if (user) $(".recieve").html(`${receive.altName} ${user[1].value}`)
         //qr img
         $(".qr-info__image img").attr("src", `assets/${send.qrCode}`);
         // qr code
         $(".qr-info__code, .content-address-info-details-under__code").html(send.code)
         // final stage address
+        // phone input
         $(".phone_number .calculator-exchange-details-form-block__name").html(`You ${receive.altName} address`)
         $(".phone_number .calculator-exchange-details-form-block__input").attr("placeholder", `You ${receive.altName} address`);
-        // phone input
 
       }
 

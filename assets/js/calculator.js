@@ -67,9 +67,6 @@ async function currentOrder(page) {
 $(document).ready(function () {
   localStorage.setItem("stage", "order")
 
-  // $(".calculator-bottom__send ._active-valute").first().trigger("click");
-  // $(".calculator-bottom__receive ._active-receive").first().trigger("click");
-
   $(".calculator-exchange-details__form").validate({
     rules: {
       name: {
