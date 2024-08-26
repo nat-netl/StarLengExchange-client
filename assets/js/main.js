@@ -144,7 +144,10 @@ $(document).ready(function () {
         // qr code
         $(".qr-info__code, .content-address-info-details-under__code").html(send.code)
         // final stage address
-        $(".address-info-final-payment__code").html(transformationAddress(send.code))
+        $(".phone_number .calculator-exchange-details-form-block__name").html(`You ${receive.altName} address`)
+        $(".phone_number .calculator-exchange-details-form-block__input").attr("placeholder", `You ${receive.altName} address`);
+        // phone input
+
       }
 
       if (totalPrice) $(".total__price ").html(totalPrice)
