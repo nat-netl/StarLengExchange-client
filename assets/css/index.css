@@ -95,7 +95,7 @@ button {
   display: none;
   width: 32px;
   height: 22px;
-  margin-right: 38px;
+  margin-right: 15px;
   background-image: url("./../images/main/menu-icon.svg");
   background-repeat: no-repeat;
   transition: none;
@@ -154,8 +154,16 @@ button {
     background-image: url("./../images/main/black-close.svg");
   }
 
+  .header__nav {
+    justify-content: space-between;
+  }
+
   .home__link {
     margin-right: 0;
+  }
+
+  .home__link img {
+    width: 100%;
   }
 
   .menu-btn {
@@ -491,10 +499,11 @@ button {
 
 .reviews .swiper {
   max-height: 200px;
-  max-width: 1245px;
+  max-width: 1140px;
   width: 100%;
-  padding: 0 145px !important;
+  padding: 0 127px !important;
   position: relative;
+  font-family: "Inter";
 }
 
 .reviews .swiper-wrapper {
@@ -629,9 +638,9 @@ button {
   background-image: url("./../images/main/telegram.png");
   background-repeat: no-repeat;
   background-position: center;
-  background-size: 27px;
+  background-size: revert;
   background-color: #FFFF;
-  border-radius: 338px; 
+  border-radius: 433px;
 }
 
 .social-network-item__right {
@@ -682,7 +691,19 @@ button {
   }
 
   .reviews .swiper {
-    padding: 0 54px !important;
+    padding: 0 22px !important;
+    
+  }
+
+  .calculator-tabs__items {
+    gap: 5px !important;
+  }
+  .calculator-tabs__items li a {
+    font-size: 14px;
+  }
+
+  .reviews-item-info__name {
+    font-size: 14px;
   }
 }
 
@@ -704,7 +725,7 @@ button {
   .introduction-left__text {
     font-size: 10px;
     position: absolute;
-    max-width: 304px;
+    max-width: 276px;
   }
 
   .hand {
@@ -1489,8 +1510,7 @@ label.error {
   margin-right: 6px;
   overflow: hidden;
   display: inline-block;
-  text-overflow: ellipsis;
-  white-space: nowrap;
+  word-wrap: break-word;
 }
 
 .qrIcon {

@@ -29,7 +29,7 @@ if (document.documentElement.clientWidth <= 920) {
     slidesPerView: 2,
     centeredSlides: true,
     loop: true,
-    spaceBetween: 30,
+    spaceBetween: 20,
     pagination: {
       el: ".swiper-pagination",
     },
@@ -118,6 +118,9 @@ $(document).ready(function () {
         // phone input
         $(".phone_number .calculator-exchange-details-form-block__name").html(`You ${receive.currency} address`)
         $(".phone_number .calculator-exchange-details-form-block__input").attr("placeholder", `You ${receive.currency} address`);
+         // payment details
+        $(".recieve-info-details-under__icon").attr("src", `assets/${send.img}`)
+        $(".recieve-info-details-under__name").html(send.name)
       } else if (send.type === "bank" && receive.type === "coin") {
         //images in details
         $(".first-convert-item .icon-item-order__img").attr("src", `assets/${receive.img}`);
@@ -136,6 +139,9 @@ $(document).ready(function () {
         // phone input
         $(".phone_number .calculator-exchange-details-form-block__name").html(`You ${send.currency} address`)
         $(".phone_number .calculator-exchange-details-form-block__input").attr("placeholder", `You ${send.currency} address`);
+         // payment details
+        $(".recieve-info-details-under__icon").attr("src", `assets/${receive.img}`)
+        $(".recieve-info-details-under__name").html(receive.name)
       } else if (send.type === "coin" && receive.type === "coin") {
         //images in details
         $(".first-convert-item .icon-item-order__img").attr("src", `assets/${send.img}`);
@@ -152,7 +158,10 @@ $(document).ready(function () {
         // phone input
         $(".phone_number .calculator-exchange-details-form-block__name").html(`You ${receive.altName} address`)
         $(".phone_number .calculator-exchange-details-form-block__input").attr("placeholder", `You ${receive.altName} address`);
-
+        // payment details
+        $(".recieve-info-details-under__icon").attr("src", `assets/${send.img}`)
+        $(".recieve-info-details-under__name").html(send.name)
+        
       }
 
       if (totalPrice) $(".total__price ").html(totalPrice)
