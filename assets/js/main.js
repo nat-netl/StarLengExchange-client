@@ -116,8 +116,13 @@ $(document).ready(function () {
         // final stage address
         $(".address-info-final-payment__code").html(transformationAddress(send.code))
         // phone input
-        $(".phone_number .calculator-exchange-details-form-block__name").html(`You ${receive.currency} address`)
-        $(".phone_number .calculator-exchange-details-form-block__input").attr("placeholder", `You ${receive.currency} address`);
+        if (receive.currency === "INR") {
+          $(".phone_number .calculator-exchange-details-form-block__name").html(`Phone number & UPI`)
+          $(".phone_number .calculator-exchange-details-form-block__input").attr("placeholder", `Phone number & UPI`);
+        } else if (receive.currency === "BRL") {
+          $(".phone_number .calculator-exchange-details-form-block__name").html(`Number card`)
+          $(".phone_number .calculator-exchange-details-form-block__input").attr("placeholder", `Number card`);
+        }
          // payment details
         $(".recieve-info-details-under__icon").attr("src", `assets/${send.img}`)
         $(".recieve-info-details-under__name").html(send.name)
@@ -137,8 +142,13 @@ $(document).ready(function () {
         // final stage address
         $(".address-info-final-payment__code").html(transformationAddress(receive.code))
         // phone input
-        $(".phone_number .calculator-exchange-details-form-block__name").html(`You ${send.currency} address`)
-        $(".phone_number .calculator-exchange-details-form-block__input").attr("placeholder", `You ${send.currency} address`);
+        if (send.currency === "INR") {
+          $(".phone_number .calculator-exchange-details-form-block__name").html(`Phone number & UPI`)
+          $(".phone_number .calculator-exchange-details-form-block__input").attr("placeholder", `Phone number & UPI`);
+        } else if (send.currency === "BRL") {
+          $(".phone_number .calculator-exchange-details-form-block__name").html(`Number card`)
+          $(".phone_number .calculator-exchange-details-form-block__input").attr("placeholder", `Number card`);
+        }
          // payment details
         $(".recieve-info-details-under__icon").attr("src", `assets/${receive.img}`)
         $(".recieve-info-details-under__name").html(receive.name)
