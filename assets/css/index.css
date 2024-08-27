@@ -1838,6 +1838,12 @@ label.error {
   .calculator__top {
     display: none;
   }
+  .calculator-tabs__full {
+    height: 585px;
+    overflow-x: scroll;
+    -webkit-overflow-scrolling: touch;
+  }
+
   .calculator-tabs__full::-webkit-scrollbar {
     height: 4px;
   }
@@ -1849,9 +1855,7 @@ label.error {
     flex-wrap: wrap;
   }
 
-  .calculator-tabs__full {
-    height: 585px;
-  }
+  
 
   .calculator-bottom__receive {
     margin-bottom: 39px;
