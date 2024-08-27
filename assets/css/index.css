@@ -1839,6 +1839,7 @@ label.error {
   }
   .calculator-tabs__full {
     height: 585px;
+    width: 100%;
     overflow: hidden;
     overflow-x: scroll;
     overflow-y: unset;
