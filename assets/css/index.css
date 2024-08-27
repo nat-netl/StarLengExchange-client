@@ -1841,6 +1841,7 @@ label.error {
   .calculator-tabs__full {
     height: 585px;
     overflow-x: scroll;
+    overflow-y: auto;
     -webkit-overflow-scrolling: touch;
   }
 
