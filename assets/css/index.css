@@ -1844,6 +1844,7 @@ label.error {
     overflow-x: scroll;
     overflow-y: unset;
     -webkit-overflow-scrolling: touch;
+    scrollbar-color: #0A4C95 #C2D2E4;
   }
 
   .calculator-tabs__full::-webkit-scrollbar {
