@@ -22,19 +22,11 @@
             "altImg": "images/dist/XRP.png",
             "amount": 0,
             "minExchange": "17.32",
-            "maxExchange": "246899.23"
-        },
-        {
-            "id": 52,
-            "name": "Ripple ( XRP TAG MEMO )",
-            "altName": "XRP",
-            "img": "images/dist/XRP.svg",
-            "code": "500471664",
-            "qrCode": "images/dist/XRP-TAG-MEMO-qr.png",
-            "altImg": "images/dist/XRP.png",
-            "amount": 0,
-            "minExchange": "17.32",
-            "maxExchange": "246899.23"
+            "maxExchange": "246899.23",
+            "tag": [{
+                "code": "500471664",
+                "qrCode": "images/dist/XRP-TAG-MEMO-qr.png"
+            }]
         },
         {
             "id": 5426,

@@ -1511,6 +1511,12 @@ label.error {
   margin-bottom: 10px;
 }
 
+.info-details-under__address-box {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
 .recieve-info-details-under__icon {
   object-fit: cover;
   width: 25px;

@@ -17,7 +17,6 @@ $(document).ready(function () {
       seconds = seconds < 10 ? "0" + seconds : seconds;
       $(".title-header-under-order__counter").html(minutes + ":" + seconds);
       timer2 = minutes + ":" + seconds;
-      console.log(minutes);
       if (timer2 == "0:00") {
         window.location.replace("/");
         localStorage.removeItem("user");
