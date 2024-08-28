@@ -570,12 +570,12 @@ button {
 
 .reviews .swiper-button-prev {
   background-image: url("./../images/about-us/arrow-prev.svg");
-  left: 25%;
+  left: 28%;
 }
 
 .reviews .swiper-button-next {
   background-image: url("./../images/about-us/arrow-next.svg");
-  right: 25%;
+  right: 28%;
 }
 
 .reviews .swiper-slide {
