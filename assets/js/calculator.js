@@ -63,6 +63,23 @@ async function currentOrder(page) {
   }
 }
 
+async function getProccentByCurrency(currency) {
+  const url = "https://starlengexchange-server.onrender.com";
+  const endPoint = "api/v1/sheet/proccent";
+  const baseUrl = `${url}/${endPoint}?currency=${currency}`;
+  try {
+    let res = await fetch(baseUrl);
+    if (!res.ok) {
+      throw new Error(res.statusText || res.status);
+    }
+    let data = await res.json();
+    const proccent = data.data[0].proccent / 100
+    console.log (proccent)
+    return proccent;
+  } catch (err) {
+    console.error(err);
+  }
+}
 
 $(document).ready(function () {
   localStorage.setItem("stage", "order")

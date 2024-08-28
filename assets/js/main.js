@@ -225,10 +225,13 @@ $(document).ready(function () {
         //Проверка на конвертации валюты в валюту
 
         if (currentItem.type != coin.type) {
+          // Получаем coin
           const fetchCoin = await getDataById(coin.id, currentItem.currency);
+          // Получаем процент
+          const proccent = await getProccentByCurrency(currentItem.currency)
           // Цена крипты
           totalPrice = Number(
-            coin.amount * fetchCoin.data[0].price
+            coin.amount * (Number(fetchCoin.data[0].price) + (fetchCoin.data[0].price * proccent))
           ).toFixed(2);
           $(".crypto-value").val(totalPrice);
 
@@ -265,9 +268,11 @@ $(document).ready(function () {
           // Коневертация крипты в крипту
           let coin = JSON.parse(localStorage.getItem("cryptoCurrencySend"));
           const fetchCoin = await getDataById(coin.id, currentItem.altName);
+          // Получаем процент
+          const proccent = await getProccentByCurrency(currentItem.altName)
           // Цена крипты
           totalPrice = Number(
-            coin.amount * fetchCoin.data[0].price
+            coin.amount * (Number(fetchCoin.data[0].price) + (fetchCoin.data[0].price * proccent))
           ).toFixed(3);
           $(".valute-value").val(totalPrice);
 
@@ -282,11 +287,15 @@ $(document).ready(function () {
 
         //Проверка на конвертации валюты в валюту
         if (currentItem.type != coin.type) {
+          // Получаем coin
           const fetchCoin = await getDataById(coin.id, currentItem.currency);
+          // Получаем процент
+          const proccent = await getProccentByCurrency(currentItem.currency)
           // Цена крипты
           totalPrice = Number(
-            coin.amount * fetchCoin.data[0].price
+            coin.amount * (Number(fetchCoin.data[0].price) + (fetchCoin.data[0].price * proccent))
           ).toFixed(2);
+         
           $(".valute-value").val(totalPrice);
           $(".exchange__rate").children("td").eq(1).html(`1 ${coin.altName} = ${fetchCoin.data[0].price}`);
           $(".max-exchange__rate").children("td").eq(1).html(`${coin.maxExchange} ${coin.altName}`);

@@ -499,9 +499,9 @@ button {
 
 .reviews .swiper {
   max-height: 200px;
-  max-width: 1140px;
+  max-width: 1478px;
   width: 100%;
-  padding: 0 127px !important;
+  padding: 0 270px !important;
   position: relative;
   font-family: "Inter";
 }
@@ -633,14 +633,13 @@ button {
 }
 
 .social-network-item__left-icon3 {
-  width: 25px;
-  height: 25px;
-  background-image: url("./../images/main/telegram.png");
+  width: 24px;
+  height: 24px;
+  background-image: url("./../images/main/telegram.svg");
   background-repeat: no-repeat;
-  background-position: center;
-  background-size: revert;
   background-color: #FFFF;
-  border-radius: 433px;
+  background-position: center;
+  border-radius: 1000px;
 }
 
 .social-network-item__right {
@@ -708,6 +707,9 @@ button {
 }
 
 @media screen and (max-width: 670px) {
+  .header__nav {
+    width: 75%;
+  }
   .introduction__left {
     height: 164px;
   }
@@ -789,6 +791,12 @@ button {
     display: none;
   }
 }
+
+@media screen and (max-width: 500px) {
+  .header__nav {
+    width: 100%;
+  }
+}
 /* 
 ///////////////
   feedbacks
@@ -814,6 +822,7 @@ button {
   -webkit-box-shadow: -5px -4px 8px -1px rgba(34, 60, 80, 0.2);
   -moz-box-shadow: -5px -4px 8px -1px rgba(34, 60, 80, 0.2);
   box-shadow: -5px -4px 8px -1px rgba(34, 60, 80, 0.2);
+  height: auto !important;
 }
 
 .feedback__info {
