@@ -126,6 +126,33 @@ $(document).ready(function () {
          // payment details
         $(".recieve-info-details-under__icon").attr("src", `assets/${send.img}`)
         $(".recieve-info-details-under__name").html(send.name)
+        // memo tag   
+        if (send.tag[0]) {
+          $( ".info-details-under__address-box" ).append( `
+            <div class="info-details-under__address">
+              <div class="address-info-details-under__title">${send.altName} Tag Memo:</div>
+              <div class="address-info-details-under__content tag-memo">
+                <div class="content-address-info-details-under__code copy-item" id="qrCode0">${send.tag[0].code}</div>
+                <div class="content-address-info-details-under__icon-box">
+                  <a class="content-address-info-details-under__qrIcon qrIcon" href="#qr0" rel="modal:open"></a>
+                  <span class="content-address-info-details-under__copyIcon copyIcon" onClick="copyToClipboard('#qrCode0')"></span>
+                </div>
+  
+                <div id="qr0" class="modal">
+                  <a href="#" rel="modal:close"></a>
+                  <div class="qr__info">
+                    <div class="qr-info__image">
+                      <img src="" alt="qr code js-qr">
+                    </div>
+                    <div class="qr-info__code js-code"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            ` );
+          $("#qr0 .qr-info__code").html(send.tag[0].code)
+          $("#qr0 .qr-info__image img").attr("src", `assets/${send.tag[0].qrCode}`);
+        }
       } else if (send.type === "bank" && receive.type === "coin") {
         //images in details
         $(".first-convert-item .icon-item-order__img").attr("src", `assets/${receive.img}`);
@@ -152,6 +179,33 @@ $(document).ready(function () {
          // payment details
         $(".recieve-info-details-under__icon").attr("src", `assets/${receive.img}`)
         $(".recieve-info-details-under__name").html(receive.name)
+        // memo tag   
+        if (receive.tag[0]) {
+          $( ".info-details-under__address-box" ).append( `
+            <div class="info-details-under__address">
+              <div class="address-info-details-under__title">${receive.altName} Tag Memo:</div>
+              <div class="address-info-details-under__content tag-memo">
+                <div class="content-address-info-details-under__code copy-item" id="qrCode0">${send.tag[0].code}</div>
+                <div class="content-address-info-details-under__icon-box">
+                  <a class="content-address-info-details-under__qrIcon qrIcon" href="#qr0" rel="modal:open"></a>
+                  <span class="content-address-info-details-under__copyIcon copyIcon" onClick="copyToClipboard('#qrCode0')"></span>
+                </div>
+  
+                <div id="qr0" class="modal">
+                  <a href="#" rel="modal:close"></a>
+                  <div class="qr__info">
+                    <div class="qr-info__image">
+                      <img src="" alt="qr code js-qr">
+                    </div>
+                    <div class="qr-info__code js-code"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            ` );
+          $("#qr0 .qr-info__code").html(receive.tag[0].code)
+          $("#qr0 .qr-info__image img").attr("src", `assets/${receive.tag[0].qrCode}`);
+        }
       } else if (send.type === "coin" && receive.type === "coin") {
         //images in details
         $(".first-convert-item .icon-item-order__img").attr("src", `assets/${send.img}`);
@@ -175,31 +229,32 @@ $(document).ready(function () {
         $(".recieve-info-details-under__icon").attr("src", `assets/${send.img}`)
         $(".recieve-info-details-under__name").html(send.name)
         // memo tag        
-        console.log (send.tag[0])
-        $( ".info-details-under__address-box" ).append( `
-          <div class="info-details-under__address">
-            <div class="address-info-details-under__title">${send.altName} Tag Memo:</div>
-            <div class="address-info-details-under__content tag-memo">
-              <div class="content-address-info-details-under__code copy-item" id="qrCode0">${send.tag[0].code}</div>
-              <div class="content-address-info-details-under__icon-box">
-                <a class="content-address-info-details-under__qrIcon qrIcon" href="#qr0" rel="modal:open"></a>
-                <span class="content-address-info-details-under__copyIcon copyIcon" onClick="copyToClipboard('#qrCode0')"></span>
-              </div>
-
-              <div id="qr0" class="modal">
-                <a href="#" rel="modal:close"></a>
-                <div class="qr__info">
-                  <div class="qr-info__image">
-                    <img src="" alt="qr code js-qr">
+        if (send.tag[0]) {
+          $( ".info-details-under__address-box" ).append( `
+            <div class="info-details-under__address">
+              <div class="address-info-details-under__title">${send.altName} Tag Memo:</div>
+              <div class="address-info-details-under__content tag-memo">
+                <div class="content-address-info-details-under__code copy-item" id="qrCode0">${send.tag[0].code}</div>
+                <div class="content-address-info-details-under__icon-box">
+                  <a class="content-address-info-details-under__qrIcon qrIcon" href="#qr0" rel="modal:open"></a>
+                  <span class="content-address-info-details-under__copyIcon copyIcon" onClick="copyToClipboard('#qrCode0')"></span>
+                </div>
+  
+                <div id="qr0" class="modal">
+                  <a href="#" rel="modal:close"></a>
+                  <div class="qr__info">
+                    <div class="qr-info__image">
+                      <img src="" alt="qr code js-qr">
+                    </div>
+                    <div class="qr-info__code js-code"></div>
                   </div>
-                  <div class="qr-info__code js-code"></div>
                 </div>
               </div>
             </div>
-          </div>
-          ` );
-        $("#qr0 .qr-info__code").html(send.tag[0].code)
-        $("#qr0 .qr-info__image img").attr("src", `assets/${send.tag[0].qrCode}`);
+            ` );
+          $("#qr0 .qr-info__code").html(send.tag[0].code)
+          $("#qr0 .qr-info__image img").attr("src", `assets/${send.tag[0].qrCode}`);
+        }
       }
 
       if (totalPrice) $(".total__price ").html(totalPrice)
