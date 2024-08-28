@@ -1,4 +1,3 @@
-// AOS.init();
 new WOW().init();
 
 const swiper = new Swiper(".swiper", {
@@ -101,6 +100,8 @@ $(document).ready(function () {
 
       //order
       if (send.type === "coin" && receive.type === "bank") {
+        // total amount
+        $(".total__price").html(`${send.amount} ${send.altName}`)
         //images in details
         $(".first-convert-item .icon-item-order__img").attr("src", `assets/${send.img}`);
         $(".second-convert-item .icon-item-order__img").attr("src", `assets/${receive.img}`);
@@ -154,6 +155,8 @@ $(document).ready(function () {
           $("#qr0 .qr-info__image img").attr("src", `assets/${send.tag[0].qrCode}`);
         }
       } else if (send.type === "bank" && receive.type === "coin") {
+        // total amount
+        $(".total__price").html(`${receive.amount} ${receive.altName}`)
         //images in details
         $(".first-convert-item .icon-item-order__img").attr("src", `assets/${receive.img}`);
         $(".second-convert-item .icon-item-order__img").attr("src", `assets/${send.img}`);
@@ -207,6 +210,8 @@ $(document).ready(function () {
           $("#qr0 .qr-info__image img").attr("src", `assets/${receive.tag[0].qrCode}`);
         }
       } else if (send.type === "coin" && receive.type === "coin") {
+        // total amount
+        $(".total__price").html(`${send.amount} ${send.altName}`)
         //images in details
         $(".first-convert-item .icon-item-order__img").attr("src", `assets/${send.img}`);
         $(".second-convert-item .icon-item-order__img").attr("src", `assets/${receive.img}`);
@@ -257,7 +262,6 @@ $(document).ready(function () {
         }
       }
 
-      if (totalPrice) $(".total__price ").html(totalPrice)
 
       //order number
       if (localStorage.getItem("orderNumber")) {
