@@ -319,7 +319,7 @@ $(document).ready(function () {
           // Цена крипты
           totalPrice = Number(
             coin.amount * (Number(fetchCoin.data[0].price) + (fetchCoin.data[0].price * proccent))
-          ).toFixed(2);
+          ).toFixed(5);
           $(".crypto-value").val(totalPrice);
 
           $(".exchange__rate").children("td").eq(1).html(`1 ${coin.altName} = ${fetchCoin.data[0].price}`);
@@ -360,7 +360,7 @@ $(document).ready(function () {
           // Цена крипты
           totalPrice = Number(
             coin.amount * (Number(fetchCoin.data[0].price) + (fetchCoin.data[0].price * proccent))
-          ).toFixed(2);
+          ).toFixed(5);
           $(".valute-value").val(totalPrice);
 
           $(".exchange__rate").children("td").eq(1).html(`1 ${coin.altName} = ${fetchCoin.data[0].price}`);
@@ -381,7 +381,7 @@ $(document).ready(function () {
           // Цена крипты
           totalPrice = Number(
             coin.amount * (Number(fetchCoin.data[0].price) + (fetchCoin.data[0].price * proccent))
-          ).toFixed(2);
+          ).toFixed(5);
          
           $(".valute-value").val(totalPrice);
           $(".exchange__rate").children("td").eq(1).html(`1 ${coin.altName} = ${fetchCoin.data[0].price}`);
