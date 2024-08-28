@@ -509,29 +509,6 @@ $(document).ready(function () {
     }
   });
 
-  // cancel order
-  $("body").on(
-    "click touchstart",
-    ".cancel-order",
-    function () {
-      window.location.replace("/")
-      localStorage.clear();
-    }
-  );
-  // paid
-  $("body").on(
-    "click touchstart",
-    ".paid",
-    function () {
-      $(".order-payment__under").css("display", "none")
-      $(".order-payment__final  ").css("display", "block")
-
-      $(".stages-order__order-stage").removeClass("_active-stage")
-      $(".stages-order__final-stage").addClass("_active-stage")
-
-      localStorage.setItem("stage", "final")
-    }
-  );
   // Open element
   $('.order__details .js-open').click(function(){
 		$(this).children('.js-arrow').toggleClass("open-arrow");	 

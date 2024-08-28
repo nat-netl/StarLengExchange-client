@@ -31,4 +31,80 @@ $(document).ready(function () {
     $(".order-payment__under").css("display", "none")
     $(".order-payment__final  ").css("display", "block")
   }
+
+
+  async function sendOrderData(orderNumber, name, mail, addressTransaction, send, sendCurrency, receive, receiveCurrency) {
+    try {
+      const response = await fetch(`http://localhost:8001/api/v1/sheet/order`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json; charset=utf-8'
+        },
+        body: JSON.stringify({
+          orderNumber,
+          name,
+          mail,
+          addressTransaction,
+          send,
+          sendCurrency,
+          receive,
+          receiveCurrency
+        })
+      });
+  
+      if (!response.ok) {
+        throw new Error(`HTTP error! Status: ${response.status}`);
+      }
+  
+      const data = await response.json();
+      console.log('Data sent successfully:', data);
+  
+    } catch (error) {
+      console.error('Error sending data:', error);
+    }
+  }
+
+   // cancel order
+   $("body").on(
+    "click touchstart",
+    ".cancel-order",
+    function () {
+      window.location.replace("/")
+      localStorage.clear();
+    }
+  );
+  // paid
+  $("body").on(
+    "click touchstart",
+    ".paid",
+    function () {
+      const send = JSON.parse(localStorage.getItem("cryptoCurrencySend"));
+      const receive = JSON.parse(localStorage.getItem("cryptoCurrencyReceive"));
+      const totalPrice = JSON.parse(localStorage.getItem("totalPrice"));
+      const user = JSON.parse(localStorage.getItem("user"));
+      const orderNumber = JSON.parse(localStorage.getItem("orderNumber"))
+
+
+      
+      $(".order-payment__under").css("display", "none")
+      $(".order-payment__final  ").css("display", "block")
+
+      $(".stages-order__order-stage").removeClass("_active-stage")
+      $(".stages-order__final-stage").addClass("_active-stage")
+
+      localStorage.setItem("stage", "final")
+
+      if (user && receive && send) {
+        if (send.type === "coin" && receive.type === "bank") {
+          sendOrderData (orderNumber, user[0].value, user[2].value, send.code, send.amount, send.name, totalPrice, receive.currency)
+          
+        } else if (send.type === "bank" && receive.type === "coin") {
+          sendOrderData (orderNumber, user[0].value, user[2].value, receive.code, receive.amount, receive.name, totalPrice, send.currency)
+  
+        } else if (send.type === "coin" && receive.type === "coin") {
+          sendOrderData (orderNumber, user[0].value, user[2].value, send.code, send.amount, send.name, totalPrice, receive.name)
+        }
+      }
+    }
+  );
 });
