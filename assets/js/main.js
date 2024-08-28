@@ -185,7 +185,7 @@ $(document).ready(function () {
             <div class="info-details-under__address">
               <div class="address-info-details-under__title">${receive.altName} Tag Memo:</div>
               <div class="address-info-details-under__content tag-memo">
-                <div class="content-address-info-details-under__code copy-item" id="qrCode0">${send.tag[0].code}</div>
+                <div class="content-address-info-details-under__code copy-item" id="qrCode0">${receive.tag[0].code}</div>
                 <div class="content-address-info-details-under__icon-box">
                   <a class="content-address-info-details-under__qrIcon qrIcon" href="#qr0" rel="modal:open"></a>
                   <span class="content-address-info-details-under__copyIcon copyIcon" onClick="copyToClipboard('#qrCode0')"></span>
