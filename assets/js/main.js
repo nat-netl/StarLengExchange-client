@@ -127,7 +127,7 @@ $(document).ready(function () {
         $(".recieve-info-details-under__icon").attr("src", `assets/${send.img}`)
         $(".recieve-info-details-under__name").html(send.name)
         // memo tag   
-        if (send.tag[0]) {
+        if (send.tag) {
           $( ".info-details-under__address-box" ).append( `
             <div class="info-details-under__address">
               <div class="address-info-details-under__title">${send.altName} Tag Memo:</div>
@@ -180,7 +180,7 @@ $(document).ready(function () {
         $(".recieve-info-details-under__icon").attr("src", `assets/${receive.img}`)
         $(".recieve-info-details-under__name").html(receive.name)
         // memo tag   
-        if (receive.tag[0]) {
+        if (receive.tag) {
           $( ".info-details-under__address-box" ).append( `
             <div class="info-details-under__address">
               <div class="address-info-details-under__title">${receive.altName} Tag Memo:</div>
@@ -229,7 +229,7 @@ $(document).ready(function () {
         $(".recieve-info-details-under__icon").attr("src", `assets/${send.img}`)
         $(".recieve-info-details-under__name").html(send.name)
         // memo tag        
-        if (send.tag[0]) {
+        if (send.tag) {
           $( ".info-details-under__address-box" ).append( `
             <div class="info-details-under__address">
               <div class="address-info-details-under__title">${send.altName} Tag Memo:</div>
