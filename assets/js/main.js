@@ -276,7 +276,7 @@ $(document).ready(function () {
           // Цена крипты
           totalPrice = Number(
             coin.amount * (Number(fetchCoin.data[0].price) + (fetchCoin.data[0].price * proccent))
-          ).toFixed(3);
+          ).toFixed(2);
           $(".valute-value").val(totalPrice);
 
           $(".exchange__rate").children("td").eq(1).html(`1 ${coin.altName} = ${fetchCoin.data[0].price}`);
