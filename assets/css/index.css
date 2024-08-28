@@ -798,6 +798,18 @@ button {
 
 @media screen and (max-width: 500px) {
   .header__nav {
+    width: 85%;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .header__nav {
+    width: 90%;
+  }
+}
+
+@media screen and (max-width: 350px) {
+  .header__nav {
     width: 100%;
   }
 }

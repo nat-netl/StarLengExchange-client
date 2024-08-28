@@ -14,11 +14,23 @@
         },
         {
             "id": 52,
-            "name": "Ripple",
+            "name": "Ripple ( XRP )",
             "altName": "XRP",
             "img": "images/dist/XRP.svg",
-            "code": "0x2e9d28cec8363a367aa7a8010e019aa55864b03a",
+            "code": "rJn2zAPdFA193sixJwuFixRkYDUtx3apQh",
             "qrCode": "images/dist/XRP.png",
+            "altImg": "images/dist/XRP.png",
+            "amount": 0,
+            "minExchange": "17.32",
+            "maxExchange": "246899.23"
+        },
+        {
+            "id": 52,
+            "name": "Ripple ( XRP TAG MEMO )",
+            "altName": "XRP",
+            "img": "images/dist/XRP.svg",
+            "code": "500471664",
+            "qrCode": "images/dist/XRP-TAG-MEMO-qr.png",
             "altImg": "images/dist/XRP.png",
             "amount": 0,
             "minExchange": "17.32",
@@ -94,7 +106,7 @@
             "altImg": "images/dist/whatsapp-pay-P-min.svg",
             "amount": 0,
             "minExchange": "10",
-            "maxExchange": "10"
+            "maxExchange": "2986749.11"
         },
         {
             "id": 6636,

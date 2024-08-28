@@ -1,12 +1,12 @@
 
-async function getCoinByIdJson(id) {
+async function getCoinByIdJson(name) {
   const file = "/assets/js/currencies.json";
   try {
     let res = await fetch(file);
     let data = await res.json();
 
     for (key in data.currencies) {
-      if (data.currencies[key].id === id) {
+      if (data.currencies[key].name === name) {
         return data.currencies[key];
       }
     }

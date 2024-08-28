@@ -160,7 +160,7 @@ $(document).ready(function () {
         $(".send, .address-info-final-payment__amount").html(`${send.amount} ${send.altName}`)
         // upi address in details
         if (user) {
-          $(".recieve").html(`${receive.altName}`)
+          $(".recieve").html(`${totalPrice} ${receive.altName}`)
           $(".upi-address").html(`Address: ${user[1].value}`)
         } 
         //qr img
@@ -354,7 +354,7 @@ $(document).ready(function () {
 
       if (type === "coin") {
         const id = $(this).data("id");
-        const coin = getCoinByIdJson(id);
+        const coin = getCoinByIdJson(dataCurrency);
         calculator.send(coin);
       } else if (type === "bank") {
         const id = $(this).data("id");
@@ -398,7 +398,7 @@ $(document).ready(function () {
 
       if (type === "coin") {
         const id = $(this).data("id");
-        const coin = getCoinByIdJson(id);
+        const coin = getCoinByIdJson(dataCurrency);
         calculator.receive(coin);
       } else if (type === "bank") {
         const id = $(this).data("id");
