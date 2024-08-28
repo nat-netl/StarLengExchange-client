@@ -74,7 +74,6 @@ async function getProccentByCurrency(currency) {
     }
     let data = await res.json();
     const proccent = data.data[0].proccent / 100
-    console.log (proccent)
     return proccent;
   } catch (err) {
     console.error(err);

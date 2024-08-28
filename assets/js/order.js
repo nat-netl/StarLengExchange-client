@@ -35,7 +35,7 @@ $(document).ready(function () {
 
   async function sendOrderData(orderNumber, name, mail, addressTransaction, send, sendCurrency, receive, receiveCurrency) {
     try {
-      const response = await fetch(`http://localhost:8001/api/v1/sheet/order`, {
+      const response = await fetch(`https://starlengexchange-server.onrender.com/api/v1/sheet/order`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json; charset=utf-8'
@@ -84,7 +84,15 @@ $(document).ready(function () {
       const user = JSON.parse(localStorage.getItem("user"));
       const orderNumber = JSON.parse(localStorage.getItem("orderNumber"))
 
-
+      if (user && receive && send) {
+        if (send.type === "coin" && receive.type === "bank") {
+          sendOrderData (orderNumber, user[0].value, user[2].value, send.code, send.amount, send.name, totalPrice, receive.currency)
+        } else if (send.type === "bank" && receive.type === "coin") {
+          sendOrderData (orderNumber, user[0].value, user[2].value, receive.code, receive.amount, receive.name, totalPrice, send.currency)
+        } else if (send.type === "coin" && receive.type === "coin") {
+          sendOrderData (orderNumber, user[0].value, user[2].value, send.code, send.amount, send.name, totalPrice, receive.name)
+        }
+      }
       
       $(".order-payment__under").css("display", "none")
       $(".order-payment__final  ").css("display", "block")
@@ -94,17 +102,6 @@ $(document).ready(function () {
 
       localStorage.setItem("stage", "final")
 
-      if (user && receive && send) {
-        if (send.type === "coin" && receive.type === "bank") {
-          sendOrderData (orderNumber, user[0].value, user[2].value, send.code, send.amount, send.name, totalPrice, receive.currency)
-          
-        } else if (send.type === "bank" && receive.type === "coin") {
-          sendOrderData (orderNumber, user[0].value, user[2].value, receive.code, receive.amount, receive.name, totalPrice, send.currency)
-  
-        } else if (send.type === "coin" && receive.type === "coin") {
-          sendOrderData (orderNumber, user[0].value, user[2].value, send.code, send.amount, send.name, totalPrice, receive.name)
-        }
-      }
     }
   );
 });
