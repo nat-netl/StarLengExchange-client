@@ -159,7 +159,10 @@ $(document).ready(function () {
 
         $(".send, .address-info-final-payment__amount").html(`${send.amount} ${send.altName}`)
         // upi address in details
-        if (user) $(".recieve").html(`${receive.altName} ${user[1].value}`)
+        if (user) {
+          $(".recieve").html(`${receive.altName}`)
+          $(".upi-address").html(`Address: ${user[1].value}`)
+        } 
         //qr img
         $(".qr-info__image img").attr("src", `assets/${send.qrCode}`);
         // qr code

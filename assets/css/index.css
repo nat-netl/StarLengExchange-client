@@ -1358,6 +1358,9 @@ label.error {
 
 .info-item-order__address {
   font-size: 7px;
+}
+
+.upi-address {
   color: #646464;
 }
 
