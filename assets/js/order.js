@@ -1,5 +1,6 @@
 $(document).ready(function () {
   const stage = localStorage.getItem("stage")
+  const BASE_URL = "https://starlengexchange-server.onrender.com"
 
   if (!localStorage.getItem("user")) {
     window.location.replace("/");
@@ -35,7 +36,7 @@ $(document).ready(function () {
 
   async function sendOrderData(orderNumber, name, mail, addressTransaction, send, sendCurrency, receive, receiveCurrency) {
     try {
-      const response = await fetch(`https://starlengexchange-server.onrender.com/api/v1/sheet/order`, {
+      const response = await fetch(`${BASE_URL}/api/v1/sheet/order`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json; charset=utf-8'

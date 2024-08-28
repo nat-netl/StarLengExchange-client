@@ -1,3 +1,4 @@
+const BASE_URL = "https://starlengexchange-server.onrender.com"
 
 async function getCoinByIdJson(name) {
   const file = "/assets/js/currencies.json";
@@ -32,9 +33,8 @@ async function getBankByIdJson(id) {
 }
 
 async function getDataById(id, valute) {
-  const url = "https://starlengexchange-server.onrender.com";
   const endPoint = "api/v1/coin";
-  const baseUrl = `${url}/${endPoint}?id=${id}&valute=${valute}`;
+  const baseUrl = `${BASE_URL}/${endPoint}?id=${id}&valute=${valute}`;
   try {
     let res = await fetch(baseUrl);
     if (!res.ok) {
@@ -48,9 +48,8 @@ async function getDataById(id, valute) {
 }
 
 async function currentOrder(page) {
-  const url = "https://starlengexchange-server.onrender.com";
   const endPoint = "api/v1/page";
-  const baseUrl = `${url}/${endPoint}?page=${page}`;
+  const baseUrl = `${BASE_URL}/${endPoint}?page=${page}`;
   try {
     let res = await fetch(baseUrl);
     if (!res.ok) {
@@ -64,9 +63,8 @@ async function currentOrder(page) {
 }
 
 async function getProccentByCurrency(currency) {
-  const url = "https://starlengexchange-server.onrender.com";
   const endPoint = "api/v1/sheet/proccent";
-  const baseUrl = `${url}/${endPoint}?currency=${currency}`;
+  const baseUrl = `${BASE_URL}/${endPoint}?currency=${currency}`;
   try {
     let res = await fetch(baseUrl);
     if (!res.ok) {
