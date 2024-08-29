@@ -503,7 +503,15 @@ $(document).ready(function () {
   );
 
   $(".crypto-value").on("input", function () {
-    let curVal = parseFloat($(this).val());
+    let curVal = $(this).val();
+
+    if(isNaN(curVal)){
+      curVal = curVal.replace(/[^0-9\.]/g,'');
+         if(curVal.split('.').length>2) 
+          curVal =curVal.replace(/\.+$/,"");
+    }
+    $(this).val(curVal); 
+
     const receive = JSON.parse(localStorage.getItem("cryptoCurrencyReceive"));
     const send = JSON.parse(localStorage.getItem("cryptoCurrencySend"));
 
@@ -517,7 +525,15 @@ $(document).ready(function () {
   });
 
   $(".valute-value").on("input", function () {
-    let curVal = parseFloat($(this).val());
+    let curVal = $(this).val();
+
+    if(isNaN(curVal)){
+      curVal = curVal.replace(/[^0-9\.]/g,'');
+         if(curVal.split('.').length>2) 
+          curVal =curVal.replace(/\.+$/,"");
+    }
+    $(this).val(curVal); 
+    
     const receive = JSON.parse(localStorage.getItem("cryptoCurrencyReceive"));
     const send = JSON.parse(localStorage.getItem("cryptoCurrencySend"));
 
