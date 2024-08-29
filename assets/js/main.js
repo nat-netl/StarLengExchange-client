@@ -271,6 +271,8 @@ $(document).ready(function () {
 
   let calculator = {
     send: async function (item) {
+      $('#loading').show();
+
       let totalPrice = 0;
       const currentItem = await item;
       if (currentItem.code) {
@@ -306,7 +308,6 @@ $(document).ready(function () {
         if (currentItem.type != coin.type) {
           // Получаем coin
           const fetchCoin = await getDataById(coin.id, currentItem.currency);
-         
           if (currentItem.amount) {
             $(".crypto-value").val(currentItem.amount);
             this.receive(coin);
@@ -352,6 +353,9 @@ $(document).ready(function () {
           // Коневертация крипты в крипту
           let coin = JSON.parse(localStorage.getItem("cryptoCurrencySend"));
           const fetchCoin = await getDataById(coin.id, currentItem.altName);
+
+          // console.log (await getDataById(1, "INR"))
+          
           // Получаем процент
           const proccent = await getProccentByCurrency(currentItem.altName)
           // Цена крипты

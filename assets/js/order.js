@@ -102,6 +102,7 @@ $(document).ready(function () {
       $(".stages-order__final-stage").addClass("_active-stage")
 
       localStorage.setItem("stage", "final")
+      localStorage.removeItem("orderNumber")
     }
   );
   

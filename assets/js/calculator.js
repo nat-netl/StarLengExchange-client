@@ -37,12 +37,17 @@ async function getDataById(id, valute) {
   const baseUrl = `${BASE_URL}/${endPoint}?id=${id}&valute=${valute}`;
   try {
     let res = await fetch(baseUrl);
+
     if (!res.ok) {
       throw new Error(res.statusText || res.status);
     }
     let data = await res.json();
+
+    $('#loading').hide(); 
+
     return data;
   } catch (err) {
+    $('#loading').hide(); 
     console.error(err);
   }
 }
