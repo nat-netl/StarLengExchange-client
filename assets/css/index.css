@@ -1518,7 +1518,7 @@ label.error {
 }
 
 .recieve-info-details-under__icon {
-  object-fit: cover;
+  object-fit: contain;
   width: 25px;
   height: 25px;
   padding: 4px;

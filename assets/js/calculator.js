@@ -47,21 +47,6 @@ async function getDataById(id, valute) {
   }
 }
 
-async function currentOrder(page) {
-  const endPoint = "api/v1/page";
-  const baseUrl = `${BASE_URL}/${endPoint}?page=${page}`;
-  try {
-    let res = await fetch(baseUrl);
-    if (!res.ok) {
-      throw new Error(res.statusText || res.status);
-    }
-    let data = await res.json();
-    return data;
-  } catch (err) {
-    console.error(err);
-  }
-}
-
 async function getProccentByCurrency(currency) {
   const endPoint = "api/v1/sheet/proccent";
   const baseUrl = `${BASE_URL}/${endPoint}?currency=${currency}`;

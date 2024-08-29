@@ -1,5 +1,20 @@
 new WOW().init();
 
+async function currentOrder(page) {
+  const endPoint = "api/v1/page";
+  const baseUrl = `${BASE_URL}/${endPoint}?page=${page}`;
+  try {
+    let res = await fetch(baseUrl);
+    if (!res.ok) {
+      throw new Error(res.statusText || res.status);
+    }
+    let data = await res.json();
+    return data;
+  } catch (err) {
+    console.error(err);
+  }
+}
+
 const swiper = new Swiper(".swiper", {
   loop: true,
   slidesPerView: 1,
@@ -173,13 +188,13 @@ $(document).ready(function () {
         $(".address-info-final-payment__code").html(transformationAddress(receive.code))
         // phone input
         if (send.currency === "INR") {
-          $(".phone_number .calculator-exchange-details-form-block__name").html(`Phone number & UPI`)
-          $(".phone_number .calculator-exchange-details-form-block__input").attr("placeholder", `Phone number & UPI`);
+          $(".phone_number .calculator-exchange-details-form-block__name").html(`You "Token" address`)
+          $(".phone_number .calculator-exchange-details-form-block__input").attr("placeholder", `You "Token" address`);
 
           $(".address-info-details-under__title").html("UPI:")
         } else if (send.currency === "BRL") {
-          $(".phone_number .calculator-exchange-details-form-block__name").html(`Number card`)
-          $(".phone_number .calculator-exchange-details-form-block__input").attr("placeholder", `Number card`);
+          $(".phone_number .calculator-exchange-details-form-block__name").html(`You "Token" address`)
+          $(".phone_number .calculator-exchange-details-form-block__input").attr("placeholder", `You "Token" address`);
        
           $(".address-info-details-under__title").html("PIX:")
         }
@@ -240,7 +255,6 @@ $(document).ready(function () {
           $("#qr0 .qr-info__image img").attr("src", `assets/${send.tag[0].qrCode}`);
         }
       }
-
 
       //order number
       if (localStorage.getItem("orderNumber")) {
@@ -423,10 +437,14 @@ $(document).ready(function () {
         const id = $(this).data("id");
         const coin = getCoinByIdJson(dataCurrency);
         calculator.send(coin);
+
+        $('.calculator-bottom__receive .item-block__currency[data-type="bank"]').show();
       } else if (type === "bank") {
         const id = $(this).data("id");
         const bank = getBankByIdJson(id);
         calculator.send(bank);
+
+        $('.calculator-bottom__receive .item-block__currency[data-type="bank"]').hide();
       }
     }
   );
@@ -467,10 +485,14 @@ $(document).ready(function () {
         const id = $(this).data("id");
         const coin = getCoinByIdJson(dataCurrency);
         calculator.receive(coin);
+
+        $('.calculator-bottom__send .item-block__currency[data-type="bank"]').show();
       } else if (type === "bank") {
         const id = $(this).data("id");
         const bank = getBankByIdJson(id);
         calculator.receive(bank);
+
+        $('.calculator-bottom__send .item-block__currency[data-type="bank"]').hide();
       }
     }
   );
