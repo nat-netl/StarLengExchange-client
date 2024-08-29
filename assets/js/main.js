@@ -292,12 +292,7 @@ $(document).ready(function () {
         if (currentItem.type != coin.type) {
           // Получаем coin
           const fetchCoin = await getDataById(coin.id, currentItem.currency);
-          // Получаем процент
-          const proccent = await getProccentByCurrency(currentItem.currency)
-          // Цена крипты
-          // totalPrice = Number(
-          //   coin.amount * (Number(fetchCoin.data[0].price) + (fetchCoin.data[0].price * proccent))
-          // ).toFixed(5);
+         
           if (currentItem.amount) {
             $(".crypto-value").val(currentItem.amount);
             this.receive(coin);
