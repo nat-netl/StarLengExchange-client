@@ -2,7 +2,7 @@ $(document).ready(function () {
   const stage = localStorage.getItem("stage")
   const BASE_URL = "https://starlengexchange-server.onrender.com"
 
-  if (!localStorage.getItem("user")) {
+  if (!localStorage.getItem("user") || !localStorage.getItem("cryptoCurrencyReceive") || !localStorage.getItem("cryptoCurrencySend")) {
     window.location.replace("/");
   }
 

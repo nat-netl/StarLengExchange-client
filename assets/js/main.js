@@ -309,7 +309,7 @@ $(document).ready(function () {
           $(".min-exchange__rate").children("td").eq(1).html(`${coin.minExchange} ${coin.altName}`);
         } else {
           $(".crypto-value").val("");
-          $(".valute-value").val("");
+          localStorage.removeItem("cryptoCurrencyReceive")
         }
       } else {
         console.log("Что-то пошло не так");
@@ -377,7 +377,7 @@ $(document).ready(function () {
           $(".min-exchange__rate").children("td").eq(1).html(`${coin.minExchange} ${coin.altName}`);
 
         } else {
-          $(".crypto-value").val("");
+          localStorage.removeItem("cryptoCurrencySend")
           $(".valute-value").val("");
         }
       } else {
