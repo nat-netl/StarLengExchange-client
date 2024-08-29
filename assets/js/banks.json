@@ -4,67 +4,89 @@
       "id": 0,
       "name": "UPI",
       "currency": "INR",
-      "img": "images/dist/UPI.svg"
+      "img": "images/dist/UPI.svg",
+      "amount": 0,
+      "mail": "rahul567@paytm"
     },
     {
       "id": 1,
       "name": "PhonePe",
       "currency": "INR",
-      "img": "images/dist/Phone-pi.svg"
+      "img": "images/dist/Phone-pi.svg",
+      "amount": 0,
+      "mail": "rahul567@paytm"
     },
     {
       "id": 2,
       "name": "PayTM",
       "currency": "INR",
-      "img": "images/dist/paytm.svg"
+      "img": "images/dist/paytm.svg",
+      "amount": 0,
+      "mail": "rahul567@paytm"
     },
     {
       "id": 3,
       "name": "IMPS",
       "currency": "INR",
-      "img": "images/dist/IMPS.svg"
+      "img": "images/dist/IMPS.svg",
+      "amount": 0,
+      "mail": "rahul567@paytm"
     },
     {
       "id": 4,
       "name": "BHIM",
       "currency": "INR",
-      "img": "images/dist/bhim.svg"
+      "img": "images/dist/bhim.svg",
+      "amount": 0,
+      "mail": "rahul567@paytm"
     },
     {
       "id": 5,
       "name": "Google Pay",
       "currency": "INR",
-      "img": "images/dist/google-pay.svg"
+      "img": "images/dist/google-pay.svg",
+      "amount": 0,
+      "mail": "rahul567@paytm"
     },
     {
       "id": 6,
       "name": "Banco do Brasil",
       "currency": "BRL",
-      "img": "images/dist/banco.svg"
+      "img": "images/dist/banco.svg",
+      "amount": 0,
+      "mail": "StarlengExng@gmail.com"
     },
     {
       "id": 7,
       "name": "Itaú Unibanco",
       "currency": "BRL",
-      "img": "images/dist/itau.svg"
+      "img": "images/dist/itau.svg",
+      "amount": 0,
+      "mail": "StarlengExng@gmail.com"
     },
     {
       "id": 8,
       "name": "Caixa Econômica Federal",
       "currency": "BRL",
-      "img": "images/dist/caixa.svg"
+      "img": "images/dist/caixa.svg",
+      "amount": 0,
+      "mail": "StarlengExng@gmail.com"
     },
     {
       "id": 9,
       "name": "Banco Bradesco", 
       "currency": "BRL",
-      "img": "images/dist/banco-bradesco.svg"
+      "img": "images/dist/banco-bradesco.svg",
+      "amount": 0,
+      "mail": "StarlengExng@gmail.com"
     },
     {
       "id": 10,
       "name": "Brazilian Development Bank", 
       "currency": "BRL",
-      "img": "images/dist/brazilian-dev.svg"
+      "img": "images/dist/brazilian-dev.svg",
+      "amount": 0,
+      "mail": "StarlengExng@gmail.com"
     }
   ]
 }

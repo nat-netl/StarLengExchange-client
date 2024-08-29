@@ -89,7 +89,7 @@ $(document).ready(function () {
         if (send.type === "coin" && receive.type === "bank") {
           sendOrderData (orderNumber, user[0].value, user[2].value, send.code, send.amount, send.name, totalPrice, receive.currency)
         } else if (send.type === "bank" && receive.type === "coin") {
-          sendOrderData (orderNumber, user[0].value, user[2].value, receive.code, receive.amount, receive.name, totalPrice, send.currency)
+          sendOrderData (orderNumber, user[0].value, user[2].value, send.mail, send.amount, send.name, totalPrice, receive.name)
         } else if (send.type === "coin" && receive.type === "coin") {
           sendOrderData (orderNumber, user[0].value, user[2].value, send.code, send.amount, send.name, totalPrice, receive.name)
         }

@@ -156,59 +156,38 @@ $(document).ready(function () {
         }
       } else if (send.type === "bank" && receive.type === "coin") {
         // total amount
-        $(".total__price").html(`${receive.amount} ${receive.altName}`)
+        $(".total__price").html(`${send.amount} ${send.currency}`)
         //images in details
-        $(".first-convert-item .icon-item-order__img").attr("src", `assets/${receive.img}`);
-        $(".second-convert-item .icon-item-order__img").attr("src", `assets/${send.img}`);
+        $(".first-convert-item .icon-item-order__img").attr("src", `assets/${send.img}`);
+        $(".second-convert-item .icon-item-order__img").attr("src", `assets/${receive.img}`);
 
-        $(".send, .address-info-final-payment__amount").html(`${receive.amount} ${receive.altName}`)
-        $(".recieve").html(`${totalPrice} ${send.currency}`)
+        $(".send, .address-info-final-payment__amount").html(`${send.amount} ${send.currency}`)
+        $(".recieve").html(`${totalPrice} ${receive.altName }`)
         // upi address in details
-        if (user) $(".upi-address").html(`Address: UPI ${user[1].value}`)
+        if (user) $(".upi-address").html(`Address: ${user[1].value}`)
         //qr img
         $(".qr-info__image img").attr("src", `assets/${receive.qrCode}`);
         // qr code
-        $(".qr-info__code, .content-address-info-details-under__code").html(receive.code)
+        $(".qr-info__code, .content-address-info-details-under__code").html(send.mail)
         // final stage address
         $(".address-info-final-payment__code").html(transformationAddress(receive.code))
         // phone input
         if (send.currency === "INR") {
           $(".phone_number .calculator-exchange-details-form-block__name").html(`Phone number & UPI`)
           $(".phone_number .calculator-exchange-details-form-block__input").attr("placeholder", `Phone number & UPI`);
+
+          $(".address-info-details-under__title").html("UPI:")
         } else if (send.currency === "BRL") {
           $(".phone_number .calculator-exchange-details-form-block__name").html(`Number card`)
           $(".phone_number .calculator-exchange-details-form-block__input").attr("placeholder", `Number card`);
+       
+          $(".address-info-details-under__title").html("PIX:")
         }
          // payment details
-        $(".recieve-info-details-under__icon").attr("src", `assets/${receive.img}`)
-        $(".recieve-info-details-under__name").html(receive.name)
-        // memo tag   
-        if (receive.tag) {
-          $( ".info-details-under__address-box" ).append( `
-            <div class="info-details-under__address">
-              <div class="address-info-details-under__title">${receive.altName} Tag Memo:</div>
-              <div class="address-info-details-under__content tag-memo">
-                <div class="content-address-info-details-under__code copy-item" id="qrCode0">${receive.tag[0].code}</div>
-                <div class="content-address-info-details-under__icon-box">
-                  <a class="content-address-info-details-under__qrIcon qrIcon" href="#qr0" rel="modal:open"></a>
-                  <span class="content-address-info-details-under__copyIcon copyIcon" onClick="copyToClipboard('#qrCode0')"></span>
-                </div>
-  
-                <div id="qr0" class="modal">
-                  <a href="#" rel="modal:close"></a>
-                  <div class="qr__info">
-                    <div class="qr-info__image">
-                      <img src="" alt="qr code js-qr">
-                    </div>
-                    <div class="qr-info__code js-code"></div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            ` );
-          $("#qr0 .qr-info__code").html(receive.tag[0].code)
-          $("#qr0 .qr-info__image img").attr("src", `assets/${receive.tag[0].qrCode}`);
-        }
+        $(".recieve-info-details-under__icon").attr("src", `assets/${send.img}`)
+        $(".recieve-info-details-under__name").html(send.name)
+        
+        $(".qrIcon").hide()
       } else if (send.type === "coin" && receive.type === "coin") {
         // total amount
         $(".total__price").html(`${send.amount} ${send.altName}`)
@@ -310,17 +289,20 @@ $(document).ready(function () {
         currentItem.type = "bank";
         let coin = JSON.parse(localStorage.getItem("cryptoCurrencyReceive"));
         //Проверка на конвертации валюты в валюту
-
         if (currentItem.type != coin.type) {
           // Получаем coin
           const fetchCoin = await getDataById(coin.id, currentItem.currency);
           // Получаем процент
           const proccent = await getProccentByCurrency(currentItem.currency)
           // Цена крипты
-          totalPrice = Number(
-            coin.amount * (Number(fetchCoin.data[0].price) + (fetchCoin.data[0].price * proccent))
-          ).toFixed(5);
-          $(".crypto-value").val(totalPrice);
+          // totalPrice = Number(
+          //   coin.amount * (Number(fetchCoin.data[0].price) + (fetchCoin.data[0].price * proccent))
+          // ).toFixed(5);
+          if (currentItem.amount) {
+            $(".crypto-value").val(currentItem.amount);
+            this.receive(coin);
+          }
+
 
           $(".exchange__rate").children("td").eq(1).html(`1 ${coin.altName} = ${fetchCoin.data[0].price}`);
           $(".max-exchange__rate").children("td").eq(1).html(`${coin.maxExchange} ${coin.altName}`);
@@ -345,12 +327,18 @@ $(document).ready(function () {
         currentItem.type = "coin";
         let bank = JSON.parse(localStorage.getItem("cryptoCurrencySend"));
         if (currentItem.type != bank.type) {
-          this.send(bank);
-          if (currentItem.amount) {
-            $(".valute-value").val(currentItem.amount);
-          } else {
-            $(".valute-value").val("");
+          if (bank.amount) {
+            const fetchCoin = await getDataById(currentItem.id, bank.currency);
+            // Получаем процент
+            const proccent = await getProccentByCurrency(currentItem.altName)
+  
+            totalPrice = Number(
+              bank.amount / Number(Number(fetchCoin.data[0].price) - (Number(fetchCoin.data[0].price) * Number(proccent)))
+            ).toFixed(5);
+
+            $(".valute-value").val(totalPrice);
           }
+
         } else {
           // Коневертация крипты в крипту
           let coin = JSON.parse(localStorage.getItem("cryptoCurrencySend"));
@@ -494,9 +482,13 @@ $(document).ready(function () {
 
   $(".crypto-value").on("input", function () {
     let curVal = parseFloat($(this).val());
+    const receive = JSON.parse(localStorage.getItem("cryptoCurrencyReceive"));
     const send = JSON.parse(localStorage.getItem("cryptoCurrencySend"));
 
     if (send.type === "coin") {
+      send.amount = curVal;
+      calculator.send(send);
+    } else if (send.type === "bank" && receive.type === "coin") {
       send.amount = curVal;
       calculator.send(send);
     }
