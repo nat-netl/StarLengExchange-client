@@ -330,6 +330,7 @@ $(document).ready(function () {
       return updateValues();
     },
     receive: async function (item) {
+      $('#loading').css("display", "flex");
       let totalPrice = 0;
       const currentItem = await item;
       if (currentItem.code) {

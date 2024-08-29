@@ -105,5 +105,4 @@ $(document).ready(function () {
       localStorage.removeItem("orderNumber")
     }
   );
-  
 });

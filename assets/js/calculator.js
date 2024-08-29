@@ -43,11 +43,11 @@ async function getDataById(id, valute) {
     }
     let data = await res.json();
 
-    $('#loading').hide(); 
+    $('.main #loading').css("display", "none"); 
 
     return data;
   } catch (err) {
-    $('#loading').hide(); 
+    $('.main #loading').css("display", "none"); 
     console.error(err);
   }
 }
