@@ -36,7 +36,7 @@ $(document).ready(function () {
 
   async function sendOrderData(orderNumber, name, mail, addressTransaction, send, sendCurrency, receive, receiveCurrency) {
     try {
-      const response = await fetch(`${BASE_URL}/api/v1/sheet/order`, {
+      const response = await fetch(`http://localhost:8001/api/v1/sheet/order`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json; charset=utf-8'
@@ -89,7 +89,7 @@ $(document).ready(function () {
         if (send.type === "coin" && receive.type === "bank") {
           sendOrderData (orderNumber, user[0].value, user[2].value, send.code, send.amount, send.name, totalPrice, receive.currency)
         } else if (send.type === "bank" && receive.type === "coin") {
-          sendOrderData (orderNumber, user[0].value, user[2].value, send.mail, send.amount, send.name, totalPrice, receive.name)
+          sendOrderData (orderNumber, user[0].value, user[2].value, send.mail, String(send.amount), send.name, totalPrice, receive.name)
         } else if (send.type === "coin" && receive.type === "coin") {
           sendOrderData (orderNumber, user[0].value, user[2].value, send.code, send.amount, send.name, totalPrice, receive.name)
         }
