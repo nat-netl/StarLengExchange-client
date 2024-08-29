@@ -271,12 +271,15 @@ $(document).ready(function () {
 
   let calculator = {
     send: async function (item) {
-      $('#loading').css("display", "flex");
-
+      // $('#loading').css("display", "flex");
+      
       let totalPrice = 0;
       const currentItem = await item;
+      if (localStorage.getItem("cryptoCurrencyReceive") != null && localStorage.getItem("cryptoCurrencySend") != null) {
+        $('#loading').css("display", "flex");
+      } 
+      
       if (currentItem.code) {
-
         // Логика крипты в поле send
         currentItem.type = "coin";
         let bank = JSON.parse(localStorage.getItem("cryptoCurrencyReceive"))
@@ -330,12 +333,17 @@ $(document).ready(function () {
       return updateValues();
     },
     receive: async function (item) {
-      $('#loading').css("display", "flex");
+      // $('#loading').css("display", "flex");
       let totalPrice = 0;
       const currentItem = await item;
+      if (localStorage.getItem("cryptoCurrencySend") != null && localStorage.getItem("cryptoCurrencyReceive") != null) {
+        $('#loading').css("display", "flex");
+      } 
+
       if (currentItem.code) {
         // Логика крипты в поле receive
         currentItem.type = "coin";
+
         let bank = JSON.parse(localStorage.getItem("cryptoCurrencySend"));
         if (currentItem.type != bank.type) {
           if (bank.amount) {
@@ -533,7 +541,7 @@ $(document).ready(function () {
           curVal =curVal.replace(/\.+$/,"");
     }
     $(this).val(curVal); 
-    
+
     const receive = JSON.parse(localStorage.getItem("cryptoCurrencyReceive"));
     const send = JSON.parse(localStorage.getItem("cryptoCurrencySend"));
 
