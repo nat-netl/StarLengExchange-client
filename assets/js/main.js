@@ -271,7 +271,7 @@ $(document).ready(function () {
 
   let calculator = {
     send: async function (item) {
-      $('#loading').show();
+      $('#loading').css("display", "flex");
 
       let totalPrice = 0;
       const currentItem = await item;
