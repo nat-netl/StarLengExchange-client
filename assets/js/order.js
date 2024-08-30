@@ -36,7 +36,7 @@ $(document).ready(function () {
 
   async function sendOrderData(orderNumber, name, mail, addressTransaction, send, sendCurrency, receive, receiveCurrency) {
     try {
-      const response = await fetch(`http://localhost:8001/api/v1/sheet/order`, {
+      const response = await fetch(`${BASE_URL}/api/v1/sheet/order`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json; charset=utf-8'
